@@ -10,6 +10,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
+footer {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 700;
+  font-size: 0.85em;
+  padding: 10px;
+  text-align: center;
+  user-select: none;
+  backdrop-filter: blur(2px);
+}
 #background {
   position: fixed;
   z-index: 1;
