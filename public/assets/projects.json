@@ -1,0 +1,41 @@
+{
+  "show": true,
+  "projects": [
+    {
+      "score": 100,
+      "name": "Kady",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/lynn2910/Kady-OpalEngine"
+        }
+      ],
+      "description": "Un bot Discord qui avait pour but d'être gratuit et d'aider les utilisateurs au quotidien.",
+      "technologies": ["Rust", "Websockets & HTTP", "VueJS", "Less (css)", "MariaDB (sql)"]
+    },
+    {
+      "score": 90,
+      "name": "Diagramme de Karnaugh",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/lynn2910/Diagramme-De-Karnaugh"
+        }
+      ],
+      "description": "Un algorithme en Rust qui permet de simplifier des expressions logiques sous forme de table de vérité en utilisant la méthode de Karnaugh.",
+      "technologies": ["Rust"]
+    },
+    {
+      "score": 80,
+      "name": "DosOok",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/lynn2910/DosOok"
+        }
+      ],
+      "description": "Un algorithme Java qui permet de transmettre des messages par le biais d'audio.",
+      "technologies": ["Java", "StdDraw", "Filtre passe-bas"]
+    }
+  ]
+}
