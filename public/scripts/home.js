@@ -56,13 +56,11 @@ function load_projects() {
                 case 0: return [4 /*yield*/, load_project_json()];
                 case 1:
                     projects = _a.sent();
-                    console.log(projects);
                     if (!projects || !projects.show) {
                         document.getElementById("project_container").innerHTML = "<p class='no_project'>Aucun projet à afficher pour le moment</p>";
                         return [2 /*return*/];
                     }
                     shown_projects = projects.projects.sort(function (a, b) { return b.score - a.score; }).slice(0, PROJECTS_ON_MAIN_PAGE);
-                    console.log(shown_projects);
                     shown_projects.forEach(add_project);
                     return [2 /*return*/];
             }

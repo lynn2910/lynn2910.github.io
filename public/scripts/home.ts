@@ -23,15 +23,12 @@ const PROJECTS_ON_MAIN_PAGE: number = 4;
 async function load_projects(){
     let projects = await load_project_json();
 
-    console.log(projects)
-
     if (!projects || !projects.show) {
         document.getElementById("project_container").innerHTML = "<p class='no_project'>Aucun projet à afficher pour le moment</p>";
         return;
     }
 
     let shown_projects = projects.projects.sort((a, b) => b.score - a.score).slice(0, PROJECTS_ON_MAIN_PAGE);
-    console.log(shown_projects)
 
     shown_projects.forEach(add_project);
 }

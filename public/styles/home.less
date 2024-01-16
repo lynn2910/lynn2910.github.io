@@ -54,14 +54,6 @@ p {
 
       margin: 10px 0 0 10px;
 
-      &:hover {
-        svg {
-          fill: @main_color;
-
-          transition: fill 0.25s ease-in-out;
-        }
-      }
-
       a {
         text-decoration: none;
         color: #fff;
@@ -72,11 +64,19 @@ p {
       }
 
       svg {
-        fill: @second_color;
-        transition: fill 0.25s ease-in-out;
+        fill: @main_color;
+        transition: all 0.15s ease-in-out;
         height: 20px;
 
         width: auto;
+      }
+
+      &:hover {
+        svg {
+          transform: scale(1.05);
+
+          transition: all 0.15s ease-in-out;
+        }
       }
     }
   }
@@ -305,8 +305,10 @@ p {
       }
 
       .skills_list {
+        @size: 100px;
+
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(calc(@size + 20px), 1fr));
         grid-gap: 10px;
 
         margin: 20px auto auto auto;
@@ -315,19 +317,32 @@ p {
         .skill {
           padding: 10px;
           margin: auto;
-          width: 175px;
+          width: @size;
           border-radius: 7px;
 
           display: flex;
           flex-direction: column;
           align-items: center;
 
-          height: 50px;
+          text-align: center;
+
+          height: @size;
           user-select: none;
 
           p {
-            margin: auto 20px;
+            margin: auto;
             font-weight: 700;
+          }
+
+          svg, img {
+            @w: calc(@size - 20px);
+
+            filter: saturate(1000%) grayscale(100%);
+            fill: #000;
+
+            width: @w;
+            height: auto;
+            max-height: @w;
           }
 
           background: @main_color_gradient;

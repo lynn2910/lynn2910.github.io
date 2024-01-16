@@ -49,6 +49,7 @@ async function load_project_json(): Promise<ProjectStore | void> {
         );
 }
 
+// FIXME optimiser ce merdier
 function parse_project_json(json: any): ProjectStore {
     const projects: Project[] = [];
     for (const project of json.projects) {

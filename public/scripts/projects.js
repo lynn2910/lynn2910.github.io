@@ -73,6 +73,7 @@ function load_project_json() {
         });
     });
 }
+// FIXME optimiser ce merdier
 function parse_project_json(json) {
     var projects = [];
     for (var _i = 0, _a = json.projects; _i < _a.length; _i++) {

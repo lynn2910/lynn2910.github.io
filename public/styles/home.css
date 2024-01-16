@@ -129,10 +129,6 @@ p {
   align-items: center;
   margin: 10px 0 0 10px;
 }
-.title .text .localisation:hover svg {
-  fill: #DC2850;
-  transition: fill 0.25s ease-in-out;
-}
 .title .text .localisation a {
   text-decoration: none;
   color: #fff;
@@ -141,10 +137,14 @@ p {
   font-weight: 400;
 }
 .title .text .localisation svg {
-  fill: #28DCB4;
-  transition: fill 0.25s ease-in-out;
+  fill: #469bda;
+  transition: all 0.15s ease-in-out;
   height: 20px;
   width: auto;
+}
+.title .text .localisation:hover svg {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in-out;
 }
 #mouse-scroll {
   style: block;
@@ -307,12 +307,12 @@ p {
 .skills .container ul.list li.selected,
 .skills .container ul.list li:hover {
   cursor: pointer;
-  border-bottom: 1px solid #DC2850;
+  border-bottom: 1px solid #469bda;
   transition: border-bottom-color 0.15s ease-in-out;
 }
 .skills .container ul.list li.selected p,
 .skills .container ul.list li:hover p {
-  border-bottom: 3px solid #DC2850;
+  border-bottom: 3px solid #469bda;
   transition: border-bottom-color 0.15s ease-in-out;
 }
 .skills .container .box {
@@ -336,7 +336,7 @@ p {
 }
 .skills .container .box .skills_list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(100px + 20px), 1fr));
   grid-gap: 10px;
   margin: 20px auto auto auto;
   width: 90%;
@@ -344,22 +344,31 @@ p {
 .skills .container .box .skills_list .skill {
   padding: 10px;
   margin: auto;
-  width: 175px;
+  width: 100px;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50px;
+  text-align: center;
+  height: 100px;
   user-select: none;
-  background: linear-gradient(90deg, #DC2850 0%, #d9496a 49.9%, #c67f8e 100%);
+  background: linear-gradient(67deg, #3794d9 0%, #7eb5de 49.9%, #a2c0d7 100%);
   transition: background 0.15s ease-in-out;
 }
 .skills .container .box .skills_list .skill p {
-  margin: auto 20px;
+  margin: auto;
   font-weight: 700;
 }
+.skills .container .box .skills_list .skill svg,
+.skills .container .box .skills_list .skill img {
+  filter: saturate(1000%) grayscale(100%);
+  fill: #000;
+  width: calc(100px - 20px);
+  height: auto;
+  max-height: calc(100px - 20px);
+}
 .skills .container .box .skills_list .skill:hover {
-  background: linear-gradient(90deg, #dd496a 0%, #dd8196 49.9%, #d9c2c7 100%);
+  background: linear-gradient(67deg, #3f89c0 0%, #6594b8 49.9%, #a3b0bb 100%);
   transition: background 0.15s ease-in-out;
 }
 .projects {
@@ -417,7 +426,7 @@ p {
   margin-left: auto;
 }
 .projects .project_list .project .head .links * {
-  fill: #28DCB4;
+  fill: #c59a74;
   width: 28px;
   height: auto;
   margin: 1px 5px;
@@ -439,7 +448,7 @@ p {
   align-items: center;
   font-size: 0.75em;
   font-weight: 700;
-  background: linear-gradient(90deg, #28DCB4 0%, #49d9c7 49.9%, #7fd9c2 100%);
+  background: linear-gradient(90deg, #c59a74 0%, #d4b499 49.9%, #d2baa2 100%);
   transition: background 0.15s ease-in-out;
   color: #000;
   user-select: none;
@@ -448,7 +457,7 @@ p {
   border-radius: 7px;
 }
 .projects .project_list .project .technologies p:hover {
-  background: linear-gradient(90deg, #49d9c7 0%, #7fd9c2 49.9%, #c2d9c2 100%);
+  background: linear-gradient(90deg, #c59a74 0%, #c2afa0 49.9%, #dbd8d5 100%);
   transition: background 0.15s ease-in-out;
 }
 .projects a.btn {
@@ -464,10 +473,10 @@ p {
   background: linear-gradient(64deg, #141d27 0%, #090a0f 100%);
   transition: background 0.15s ease-in-out;
   font-weight: 800;
-  box-shadow: rgba(40, 220, 180, 0.2) 0 0 10px 0;
+  box-shadow: rgba(197, 154, 116, 0.2) 0 0 10px 0;
 }
 .projects a.btn svg {
-  fill: #28DCB4;
+  fill: #c59a74;
   margin: auto 20px auto 2px;
   height: 24px;
   width: 24px;
@@ -515,7 +524,7 @@ p {
   transition: all 0.15s ease-in-out;
 }
 .contact .links .link svg {
-  fill: #28DCB4;
+  fill: #c59a74;
 }
 .contact .links .link:hover a {
   transform: translateX(10px);
@@ -535,7 +544,7 @@ p {
   font-weight: 800;
 }
 .contact .cv svg {
-  fill: #28DCB4;
+  fill: #c59a74;
   margin: auto 20px auto 2px;
   height: 24px;
   width: 24px;
