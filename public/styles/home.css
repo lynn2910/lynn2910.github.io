@@ -353,7 +353,6 @@ p {
   height: 100px;
   user-select: none;
   background: linear-gradient(67deg, #3794d9 0%, #7eb5de 49.9%, #a2c0d7 100%);
-  transition: background 0.15s ease-in-out;
 }
 .skills .container .box .skills_list .skill p {
   margin: auto;
@@ -366,10 +365,6 @@ p {
   width: calc(100px - 20px);
   height: auto;
   max-height: calc(100px - 20px);
-}
-.skills .container .box .skills_list .skill:hover {
-  background: linear-gradient(67deg, #3f89c0 0%, #6594b8 49.9%, #a3b0bb 100%);
-  transition: background 0.15s ease-in-out;
 }
 .projects {
   width: 80%;
@@ -413,6 +408,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  min-height: 36px;
 }
 .projects .project_list .project .head h3 {
   margin: 0;
@@ -449,16 +445,11 @@ p {
   font-size: 0.75em;
   font-weight: 700;
   background: linear-gradient(90deg, #c59a74 0%, #d4b499 49.9%, #d2baa2 100%);
-  transition: background 0.15s ease-in-out;
   color: #000;
   user-select: none;
   padding: 15px 20px;
   margin: auto 10px auto 0;
   border-radius: 7px;
-}
-.projects .project_list .project .technologies p:hover {
-  background: linear-gradient(90deg, #c59a74 0%, #c2afa0 49.9%, #dbd8d5 100%);
-  transition: background 0.15s ease-in-out;
 }
 .projects a.btn {
   display: flex;

@@ -346,12 +346,6 @@ p {
           }
 
           background: @main_color_gradient;
-          transition: background 0.15s ease-in-out;
-
-          &:hover {
-            background: @main_color_gradient2;
-            transition: background 0.15s ease-in-out;
-          }
         }
       }
     }
@@ -414,6 +408,8 @@ p {
         flex-direction: row;
         align-items: center;
 
+        min-height: 36px;
+
         h3 {
           margin: 0;
           font-weight: 700;
@@ -459,18 +455,13 @@ p {
           font-weight: 700;
 
           background: @second_color_gradient;
-          transition: background 0.15s ease-in-out;
+
           color: #000;
           user-select: none;
           padding: 15px 20px;
           margin: auto 10px auto 0;
 
           border-radius: 7px;
-
-          &:hover {
-            background: @second_color_gradient2;
-            transition: background 0.15s ease-in-out;
-          }
         }
       }
     }
