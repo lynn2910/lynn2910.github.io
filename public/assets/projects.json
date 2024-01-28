@@ -2,6 +2,26 @@
   "show": true,
   "projects": [
     {
+      "score": 200,
+      "name": "Aegis",
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/chamallow-team/Aegis-server"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/chamallow-team/Aegis-client"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/chamallow-team/Aegis-assets"
+        }
+      ],
+      "technologies": ["TCP", "Rust", "Graphes"],
+      "description": "Un jeu de stratégie multijoueur en temps réel programmé de zéro"
+    },
+    {
       "score": 100,
       "name": "Kady",
       "links": [
