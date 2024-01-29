@@ -295,6 +295,7 @@ p {
   margin: 0 auto;
   border-bottom: 1px solid #435a74;
   transition: border-bottom-color 0.15s ease-in-out;
+  cursor: pointer;
 }
 .skills .container ul.list li p {
   font-weight: 700;
@@ -555,6 +556,131 @@ p {
   }
   .projects .project_list {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% - 60px), 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .title {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .title img {
+    margin-top: auto;
+    width: 40%;
+    height: auto;
+  }
+  .title .text {
+    margin-bottom: auto;
+  }
+  .title .text h1 {
+    font-size: 3.2em;
+  }
+  .title .text p {
+    font-size: 2em;
+  }
+  .title .text .localisation svg {
+    height: 20px;
+    width: auto;
+  }
+  .title .text .localisation a {
+    font-size: 1.2em;
+  }
+  .presentation h2 {
+    font-size: 3em;
+  }
+  .presentation p {
+    font-size: 2em;
+  }
+  .skills h2 {
+    font-size: 3em;
+  }
+  .skills .container ul.list {
+    flex-direction: column;
+  }
+  .skills .container ul.list li p {
+    font-size: 2em;
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+    transition: none;
+    border: none;
+  }
+  .skills .container ul.list li.selected p,
+  .skills .container ul.list li:hover p {
+    border: none;
+    transition: none;
+    color: #469bda;
+  }
+  .skills .container .box h3 {
+    font-size: 2.75em;
+  }
+  .skills .container .box .skills_list {
+    grid-template-columns: repeat(auto-fill, minmax(calc(400px + 20px), 1fr));
+  }
+  .skills .container .box .skills_list .skill {
+    width: 400px;
+    height: 400px;
+  }
+  .skills .container .box .skills_list .skill svg,
+  .skills .container .box .skills_list .skill img {
+    max-height: calc(320px);
+    height: 300px;
+    width: auto;
+  }
+  .skills .container .box .skills_list .skill p {
+    font-size: 2.25em;
+  }
+  .projects h2 {
+    font-size: 3em;
+  }
+  .projects .project_list .project {
+    padding: 40px;
+  }
+  .projects .project_list .project h3 {
+    font-size: 2.75em;
+  }
+  .projects .project_list .project p {
+    font-size: 2em;
+  }
+  .projects .project_list .project .head .links * {
+    width: 3em !important;
+    height: auto;
+  }
+  .projects a.btn {
+    font-size: 2em;
+    padding: 20px;
+  }
+  .projects a.btn svg {
+    height: 1.5em;
+    width: auto;
+  }
+  .contact h2 {
+    font-size: 3em;
+  }
+  .contact .links {
+    width: fit-content;
+  }
+  .contact .links .link {
+    width: 100%;
+    height: 2em;
+    margin: 20px auto;
+    border-bottom-width: 3px;
+    padding-bottom: 7px;
+  }
+  .contact .links .link a {
+    font-size: 1.75em;
+  }
+  .contact .links .link svg {
+    height: 2.5em;
+    width: auto;
+  }
+  .contact a.cv {
+    font-size: 1.5em;
+    padding: 20px;
+  }
+  .contact a.cv svg {
+    height: 1.5em;
+    width: auto;
   }
 }
 /*# sourceMappingURL=home.css.map */
