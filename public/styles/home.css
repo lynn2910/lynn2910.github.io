@@ -558,7 +558,7 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% - 60px), 1fr));
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 900px) or (max-device-width: 900px) {
   .title {
     flex-direction: column;
     align-items: center;
