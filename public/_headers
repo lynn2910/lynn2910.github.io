@@ -1,0 +1,11 @@
+/images/*
+max-age=3600
+
+/svg/*
+max-age=3600
+
+/documents/*
+Cache-Control: no-cache
+
+/projects/*
+Cache-Control: no-cache

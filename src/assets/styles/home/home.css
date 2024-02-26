@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", system-ui;
+  color: #fff;
+  background: #151515;
+}
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.elite {
+  font-family: "Special Elite", system-ui;
+}
+button,
+.btn {
+  padding: 20px 25px;
+  height: 50px;
+  width: fit-content;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(64deg, #3b3d42 0%, #1d1e23 100%);
+}
+button svg,
+.btn svg {
+  height: 2em;
+  margin: 4px;
+  transition: all 0.15s ease-in-out;
+}
+button:hover,
+.btn:hover {
+  animation: bg_over 0.1s ease-in-out;
+}
+@keyframes bg_hover {
+  0% {
+    background: linear-gradient(64deg, #3b3d42 0%, #1d1e23 100%);
+  }
+  100% {
+    background: linear-gradient(174deg, #3b3d42 0%, #1d1e23 100%);
+  }
+}
+button:hover svg,
+.btn:hover svg {
+  height: calc(2em + 4px);
+  margin: 0 2px;
+  transition: all 0.15s ease-in-out;
+}
+button p,
+.btn p {
+  margin-left: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+button.primary svg,
+.btn.primary svg {
+  color: #00DF9E;
+}
+button.secondary svg,
+.btn.secondary svg {
+  color: #CC0041;
+}
+.bg {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(60px);
+}
+.bg span {
+  height: var(--w, 50px);
+  width: var(--w, 50px);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+}
+.bg span.primary,
+.bg span.pyra {
+  background: #00DF9E;
+}
+.bg span:not(.primary),
+.bg span.secondary,
+.bg span.mythra {
+  background: #CC0041;
+}
+#main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+#main img {
+  height: 10em;
+  margin: auto 20px auto auto;
+  border-radius: 50%;
+  user-select: none;
+}
+#main .infos {
+  margin: auto auto auto 0;
+}
+#main .infos h1 {
+  margin: 10px 0;
+}
+#main .infos h1 span {
+  color: #00DF9E;
+}
+#main .infos p {
+  margin: 0;
+}
+#presentation {
+  width: 50vw;
+  margin: 10px auto 10em auto;
+}
+#presentation h2 {
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+#presentation p {
+  text-align: justify;
+}
+#projects {
+  margin: 10em auto 10em auto;
+  width: 60%;
+}
+#projects h2 {
+  text-align: center;
+  margin: auto auto 30px;
+}
+#projects .projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+#projects .projects .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  min-width: 300px;
+  margin: 10px auto;
+  padding: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+#projects .projects .project .head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+#projects .projects .project .head h3 {
+  margin: 0 auto auto 0;
+}
+#projects .projects .project .head .links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 0 auto auto;
+}
+#projects .projects .project .head .links a {
+  color: #fff;
+  text-decoration: none;
+  margin: auto 5px;
+}
+#projects .projects .project .head .links a svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: color 0.1s ease-in-out;
+}
+#projects .projects .project .head .links a svg:hover {
+  color: #CC0041;
+  transition: color 0.1s ease-in-out;
+}
+#projects .projects .project .skills {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+}
+#projects .projects .project .skills svg {
+  height: auto;
+  width: 1em;
+  color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+#projects .projects .project .skills svg:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+#projects .projects .project .skills .list {
+  margin: auto 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(100% - 2em);
+  overflow-x: hidden;
+}
+#projects .projects .project .skills .list .internal_view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#projects .projects .project .skills .list p {
+  background: rgba(204, 0, 65, 0.48);
+  height: 100%;
+  padding: 5px 10px;
+  margin: auto 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 700;
+  width: max-content;
+  user-select: none;
+}
+#projects .projects .project .skills .list p:hover {
+  background: #CC0041;
+}
+#projects a.btn {
+  margin: 50px auto;
+}
+#contact {
+  margin: 50px auto 20px auto;
+}
+#contact h2 {
+  margin: auto;
+  text-align: center;
+}
+#contact .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 30px auto 0 auto;
+}
+#contact .contact a {
+  width: 90%;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: normal;
+  text-decoration: none;
+  color: #fff;
+}
+#contact .contact a svg {
+  height: 2em;
+  width: auto;
+  margin-right: 1em;
+}
+#contact .contact a p {
+  margin-left: 0;
+  margin-right: 10px;
+  transition: margin 0.15s ease-in-out;
+}
+#contact .contact a:hover p {
+  margin-left: 10px;
+  margin-right: 0;
+  transition: margin 0.15s ease-in-out;
+}
+#contact a.btn {
+  margin: 50px auto;
+}
+footer {
+  height: 50px;
+  width: fit-content;
+  padding: 10px 50px;
+  margin: 50px auto 20px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: calc(50px / 2);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  background: rgba(21, 21, 21, 0.35);
+  backdrop-filter: blur(17px);
+}
+footer p {
+  margin: auto;
+  text-align: center;
+  font-weight: 400;
+  color: #999;
+}
+/*# sourceMappingURL=home.css.map */

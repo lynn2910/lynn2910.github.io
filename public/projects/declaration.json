@@ -1,0 +1,22 @@
+[
+  {
+    "properties": "aegis/aegis.json",
+    "md": "aegis/aegis.md",
+    "score": 1000
+  },
+  {
+    "properties": "kady/kady.json",
+    "md": "kady/kady.md",
+    "score": 700
+  },
+  {
+    "properties": "calco/calco.json",
+    "md": "calco/calco.md",
+    "score": 800
+  },
+  {
+    "properties": "banoffee-pie/banoffee-pie.json",
+    "md": "aegis/aegis.md",
+    "score": 1000
+  }
+]

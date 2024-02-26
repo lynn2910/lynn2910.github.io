@@ -1,0 +1,133 @@
+@import '../global';
+
+#skills {
+  width: 60%;
+  margin: auto;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  @padding: 20px;
+
+  h2 {
+    text-align: center;
+    margin: 4em auto 2em auto;
+  }
+
+  .list, .box {
+    border-radius: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.50);
+    background: rgba(21, 21, 21, 0.35);
+    backdrop-filter: blur(17px);
+
+    padding: @padding;
+  }
+
+  @gap: 10px;
+
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    width: calc(30% - (@padding * 2));
+    min-width: 150px;
+
+    text-align: center;
+
+    li {
+      margin: 0 auto 25px auto;
+      user-select: none;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+        font-weight: 200;
+        font-size: 1.2em;
+      }
+
+      &.selected p {
+        font-weight: 700;
+        color: @primary;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  .box {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: @gap;
+
+    width: calc(100% - (@padding * 2) - @gap);
+
+    h3 {
+      margin: 0 auto 10px 10px;
+    }
+
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding: 20px;
+      margin: 0 auto;
+
+      .skill {
+        height: 150px;
+        width: 150px;
+
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 29px;
+        border: 3px solid #585858;
+        background: rgba(34, 34, 34, 0.25);
+        backdrop-filter: blur(15px);
+
+        padding: 20px;
+
+        p {
+          text-align: center;
+          margin: auto;
+        }
+
+        svg, img {
+          height: 80px;
+          width: 80px;
+        }
+
+        transition: border 0.1s ease-in-out, background-color 0.15s ease-in-out;
+
+        &:hover {
+          border: 3px solid #808080;
+          background: rgba(88, 88, 88, 0.25);
+
+          transition: border 0.1s ease-in-out, background-color 0.15s ease-in-out;
+        }
+      }
+    }
+  }
+}

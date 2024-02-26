@@ -1,0 +1,11 @@
+{
+  "name": "Calco",
+  "description": "Un outil en ligne de commande qui permet de calculer des expressions mathématiques, similaire à un langage de programmation.",
+  "links": [
+    {
+      "type": "github",
+      "url": "https://github.com/lynn2910/Calco"
+    }
+  ],
+  "skills": ["Rust", "Tokenizer & Parsing", "Arbre de syntaxe abstraite (AST)"]
+}
