@@ -1,7 +1,12 @@
 @import 'global';
 
+@height: 60px;
+@top: 20px;
+
+@full_height: @height + @top * 2;
+
 nav {
-  height: 60px;
+  height: @height;
   width: 50%;
   min-width: 600px;
 
@@ -9,7 +14,7 @@ nav {
 
   position: fixed;
   z-index: 1000;
-  top: 20px;
+  top: @top;
   left: 50%;
   transform: translateX(-50%);
 

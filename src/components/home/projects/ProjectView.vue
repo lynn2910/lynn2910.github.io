@@ -23,39 +23,35 @@
 
 <script setup lang="ts">
 import ProjectBox from "@/components/home/projects/ProjectBox.vue";
-import {get_project_properties, get_projects, type ProjectProperties} from "@/assets/scripts/projects";
+import {
+  get_all_articles,
+  type ProjectDeclaration,
+  type ProjectProperties,
+  type TreeFolder
+} from '@/assets/scripts/projects'
+import projectsDeclaration from "/public/projects/declaration.json";
 import {type Ref, ref} from "vue";
 
 let shown_projects: Ref<ProjectProperties[]> = ref([]);
 
 const MAX_PROJECTS_SHOWN = 4;
 
-get_projects().then(
-    async function(projects){
-      let registered_projects = 0;
+console.log(projectsDeclaration)
 
-      let sorted_projects = projects.sort((p1, p2) => p2.score - p1.score);
+let projects = get_all_articles(projectsDeclaration)
 
-      for (let p of sorted_projects){
-        console.log(registered_projects)
-        if (registered_projects >= MAX_PROJECTS_SHOWN)
-          break;
+let registered_projects = 0;
 
-        await get_project_properties(p).then(
-            function(r){
-              if (r === null)
-                console.error("A project doesn't have a declaration file:", p);
+let sorted_projects = projects.sort((p1, p2) => p2.score - p1.score);
 
-              // increase the counter
-              registered_projects += 1;
+for (let p of sorted_projects){
+  console.log(registered_projects)
+  if (registered_projects >= MAX_PROJECTS_SHOWN)
+    break;
 
-              shown_projects.value.push(r as ProjectProperties);
-            },
-            console.error
-        )
-      }
-    },
-    console.error
-);
+  // increase the counter
+  registered_projects += 1;
 
+  shown_projects.value.push(p.properties);
+}
 </script>
