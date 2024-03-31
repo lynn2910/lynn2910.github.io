@@ -7,8 +7,8 @@
 
 nav {
   height: @height;
-  width: 50%;
-  min-width: 600px;
+  min-width: 400px;
+  max-width: 100%;
 
   user-select: none;
 
@@ -87,7 +87,7 @@ nav {
         width: 0;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateY(-50%);
 
         background: @font_color;
 
@@ -175,5 +175,38 @@ nav {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  nav {
+    flex-direction: column;
+
+    min-width: 200px;
+    width: fit-content;
+
+    &:not(.closed) {
+      height: 11em;
+    }
+
+    .links {
+      transform: translateY(3em) translateX(-50%);
+      width: 100%;
+      height: fit-content;
+
+      flex-direction: column;
+
+      a::after {
+        transform: translateX(-50%);
+      }
+    }
+
+    a.home {
+      margin: 15px auto;
+    }
+
+    .reduce_open {
+      margin: auto auto 5px auto;
+    }
   }
 }
