@@ -16,6 +16,8 @@
   }
 
   #go_back {
+    user-select: none;
+
     position: fixed;
     top: 3em;
     left: 3em;
@@ -87,6 +89,9 @@
       flex-direction: row;
       align-items: center;
 
+      user-select: none;
+      cursor: pointer;
+
       svg {
         margin-left: auto;
       }
@@ -96,6 +101,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      height: 100%;
+      width: 100%;
+
+      overflow-y: scroll;
+      overflow-x: hidden;
     }
 
     a {
@@ -103,6 +114,7 @@
       font-weight: bold;
       line-height: 1.5em;
 
+      // FIXME ca ne marche pas?
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -145,9 +157,15 @@
         color: #6597e4;
       }
 
-      pre, code {
+      pre, code, pre code {
         text-align: center;
         width: fit-content;
+        max-width: 100vw;
+
+        display: inline-block;
+        overflow-x: hidden;
+        white-space: break-spaces;
+        text-overflow: clip;
 
         &.full {
           width: 100%;

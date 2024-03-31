@@ -44,9 +44,9 @@ function navigation_open_close(){
       </div>
     </div>
     <div id="project_tree" :class="is_nav_open ? 'opened' : 'closed'">
-      <div class="head">
+      <div class="head" @click="navigation_open_close()">
         <h2>Navigation</h2>
-        <svg @click="navigation_open_close()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: currentColor"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: currentColor"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>
       </div>
       <div class="content">
         <p v-if="!headers || headers.length < 1">Aucun titre</p>

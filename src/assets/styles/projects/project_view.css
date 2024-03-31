@@ -68,7 +68,7 @@ nav .links a::after {
   width: 0;
   bottom: 0;
   left: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
   background: #fff;
   transition: width 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -154,9 +154,6 @@ nav.animate .home {
     height: fit-content;
     flex-direction: column;
   }
-  nav .links a::after {
-    transform: translateX(-50%);
-  }
   nav a.home {
     margin: 15px auto;
   }
@@ -172,9 +169,10 @@ body {
   font-family: "Raleway", system-ui;
   color: #fff;
   background: #151515;
+  max-width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 main {
   position: absolute;
@@ -338,6 +336,7 @@ footer p {
   display: inline-grid;
 }
 #project_view #go_back {
+  user-select: none;
   position: fixed;
   top: 3em;
   left: 3em;
@@ -390,6 +389,8 @@ footer p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  user-select: none;
+  cursor: pointer;
 }
 #project_view #project_tree .head svg {
   margin-left: auto;
@@ -398,6 +399,10 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #project_view #project_tree a {
   color: #fff;
@@ -434,12 +439,19 @@ footer p {
   color: #6597e4;
 }
 #project_view #project_content .body pre,
-#project_view #project_content .body code {
+#project_view #project_content .body code,
+#project_view #project_content .body pre code {
   text-align: center;
   width: fit-content;
+  max-width: 100vw;
+  display: inline-block;
+  overflow-x: hidden;
+  white-space: break-spaces;
+  text-overflow: clip;
 }
 #project_view #project_content .body pre.full,
-#project_view #project_content .body code.full {
+#project_view #project_content .body code.full,
+#project_view #project_content .body pre code.full {
   width: 100%;
   margin: 10px auto;
 }
