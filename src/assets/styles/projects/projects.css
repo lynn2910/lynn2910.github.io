@@ -394,98 +394,54 @@ footer p {
   background: #fee9be;
   color: #000;
 }
-#main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: calc(100vh - 100px);
-}
-#main img {
-  height: 10em;
-  margin: auto 20px auto auto;
-  border-radius: 50%;
-  user-select: none;
-}
-#main .infos {
-  margin: auto auto auto 0;
-}
-#main .infos h1 {
-  margin: 10px 0;
-}
-#main .infos h1 span {
-  color: #fee9be;
-}
-#main .infos p {
-  margin: 0;
-}
-#presentation {
-  width: 50vw;
-  margin: 10px auto 10em auto;
-}
-#presentation h2 {
-  text-align: center;
-  margin: 0 auto 30px auto;
-}
-#presentation p {
-  text-align: justify;
-}
-#projects {
-  margin: 10em auto 10em auto;
-  width: 60%;
-}
-#projects h2 {
-  text-align: center;
-  margin: auto auto 30px;
-}
-#projects .projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-#projects a.btn {
-  margin: 50px auto;
-}
-#contact {
-  margin: 50px auto 20px auto;
-}
-#contact h2 {
-  margin: auto;
-  text-align: center;
-}
-#contact .contact {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
-  margin: 30px auto 0 auto;
 }
-#contact .contact a {
-  width: 90%;
-  padding: 10px 15px;
-  border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+details {
+  border-radius: 7px;
+  border: 3px solid #fee9be;
+  background: rgba(254, 233, 190, 0.02);
+  padding: 10px;
+  margin: 20px auto;
+}
+details summary {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-weight: normal;
-  text-decoration: none;
-  color: #fff;
+  user-select: none;
+  cursor: pointer;
+  padding: 5px 20px;
+  width: 90%;
 }
-#contact .contact a svg {
-  height: 2em;
-  width: auto;
-  color: #fee9be;
-  margin-right: 1em;
+details summary h2,
+details summary p {
+  width: fit-content;
+  margin: 2px 0;
 }
-#contact .contact a p {
-  margin-left: 0;
-  margin-right: 10px;
-  transition: margin 0.15s ease-in-out;
+details summary::before {
+  content: "+";
+  font-size: 4em;
+  margin-right: 0.5em;
+  position: relative;
+  top: 0;
+  left: 0;
 }
-#contact .contact a:hover p {
-  margin-left: 10px;
-  margin-right: 0;
-  transition: margin 0.15s ease-in-out;
+details[open] summary::before {
+  content: "-";
+  position: relative;
+  top: 50%;
+  transform: translateY(-0.05em);
 }
-#contact a.btn {
-  margin: 50px auto;
+.project_list {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-/*# sourceMappingURL=home.css.map */
+.project_list .project_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*# sourceMappingURL=projects.css.map */

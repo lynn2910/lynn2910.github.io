@@ -9,8 +9,8 @@
     <div class="links">
       <router-link to="/#skills">Mes compétences</router-link>
       <router-link to="/projects">Mes projets</router-link>
-      <router-link to="blog">Blog & devlog</router-link>
-      <router-link to="/#contact">Me contacter</router-link>
+<!--      <router-link to="/blog">Blog & devlog</router-link>-->
+      <router-link to="/contact">Me contacter</router-link>
     </div>
 
     <svg v-if="is_closed"

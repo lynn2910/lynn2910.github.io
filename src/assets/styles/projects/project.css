@@ -148,8 +148,6 @@ body {
   font-family: "Raleway", system-ui;
   color: #fff;
   background: #151515;
-  margin: 0;
-  padding: 0;
 }
 main {
   position: absolute;
@@ -291,16 +289,8 @@ footer p {
   min-width: 300px;
   margin: 10px auto;
   padding: 15px;
-  border: 3px solid #fee9be;
+  border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  transition: background-color 0.15s ease-in-out;
-}
-.project.no_margin {
-  margin: 10px;
-}
-.project:hover {
-  transition: background-color 0.15s ease-in-out;
-  background: rgba(254, 233, 190, 0.1);
 }
 .project .head {
   display: flex;
@@ -309,7 +299,6 @@ footer p {
   width: 100%;
 }
 .project .head h3 {
-  font-size: 1.4em;
   margin: 0 auto auto 0;
 }
 .project .head .links {
@@ -329,7 +318,7 @@ footer p {
   transition: color 0.1s ease-in-out;
 }
 .project .head .links a svg:hover {
-  color: #fee9be;
+  color: #555667;
   transition: color 0.1s ease-in-out;
 }
 .project .skills {
@@ -342,11 +331,11 @@ footer p {
 .project .skills svg {
   height: auto;
   width: 1em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
 .project .skills svg:hover {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
 }
 .project .skills .list {
   margin: auto 10px;
@@ -362,8 +351,7 @@ footer p {
   align-items: center;
 }
 .project .skills .list p {
-  background: rgba(254, 233, 190, 0.6);
-  color: #000;
+  background: rgba(85, 86, 103, 0.48);
   height: 100%;
   padding: 5px 10px;
   margin: auto 5px;
@@ -372,120 +360,8 @@ footer p {
   font-weight: 700;
   width: max-content;
   user-select: none;
-  transition: all 0.1s ease-in-out;
 }
 .project .skills .list p:hover {
-  background: #fee9be;
-  transition: all 0.1s ease-in-out;
+  background: #555667;
 }
-.project a.btn.show_project {
-  height: 2em;
-  border-radius: 7px;
-  padding: 10px 15px;
-  margin: 10px auto 5px 5px;
-  color: #fff;
-  font-weight: bold;
-  border: 3px solid #fee9be;
-  background: #151515;
-  transition: all 0.15s ease-in-out;
-}
-.project a.btn.show_project:hover {
-  transition: all 0.15s ease-in-out;
-  background: #fee9be;
-  color: #000;
-}
-#main {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: calc(100vh - 100px);
-}
-#main img {
-  height: 10em;
-  margin: auto 20px auto auto;
-  border-radius: 50%;
-  user-select: none;
-}
-#main .infos {
-  margin: auto auto auto 0;
-}
-#main .infos h1 {
-  margin: 10px 0;
-}
-#main .infos h1 span {
-  color: #fee9be;
-}
-#main .infos p {
-  margin: 0;
-}
-#presentation {
-  width: 50vw;
-  margin: 10px auto 10em auto;
-}
-#presentation h2 {
-  text-align: center;
-  margin: 0 auto 30px auto;
-}
-#presentation p {
-  text-align: justify;
-}
-#projects {
-  margin: 10em auto 10em auto;
-  width: 60%;
-}
-#projects h2 {
-  text-align: center;
-  margin: auto auto 30px;
-}
-#projects .projects {
-  display: flex;
-  flex-wrap: wrap;
-}
-#projects a.btn {
-  margin: 50px auto;
-}
-#contact {
-  margin: 50px auto 20px auto;
-}
-#contact h2 {
-  margin: auto;
-  text-align: center;
-}
-#contact .contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  margin: 30px auto 0 auto;
-}
-#contact .contact a {
-  width: 90%;
-  padding: 10px 15px;
-  border-bottom: 1px solid rgba(202, 202, 202, 0.5);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: normal;
-  text-decoration: none;
-  color: #fff;
-}
-#contact .contact a svg {
-  height: 2em;
-  width: auto;
-  color: #fee9be;
-  margin-right: 1em;
-}
-#contact .contact a p {
-  margin-left: 0;
-  margin-right: 10px;
-  transition: margin 0.15s ease-in-out;
-}
-#contact .contact a:hover p {
-  margin-left: 10px;
-  margin-right: 0;
-  transition: margin 0.15s ease-in-out;
-}
-#contact a.btn {
-  margin: 50px auto;
-}
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=project.css.map */

@@ -1,0 +1,155 @@
+@import '../global';
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @padding: 15px;
+
+  width: 45%;
+  min-width: 300px;
+
+  margin: 10px auto;
+
+  &.no_margin {
+    margin: 10px;
+  }
+
+  padding: @padding;
+  border: 3px solid @primary;
+  border-radius: 10px;
+
+  transition: background-color 0.15s ease-in-out;
+  &:hover {
+    transition: background-color 0.15s ease-in-out;
+    background: rgba(@primary, 0.1);
+  }
+
+  .head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+
+    h3 {
+      font-size: 1.4em;
+      margin: 0 auto auto 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      margin: 0 0 auto auto;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        margin: auto 5px;
+
+        svg {
+          width: 1.5em;
+          height: 1.5em;
+
+          transition: color 0.1s ease-in-out;
+
+          &:hover {
+            color: @primary;
+            transition: color 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: auto;
+
+    width: 100%;
+
+    svg {
+      height: auto;
+      width: 1em;
+
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    .list {
+      @gap: 10px;
+
+      margin: auto @gap;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      width: calc(100% - 2em);
+
+      overflow-x: hidden;
+
+      .internal_view {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      p {
+        background: rgba(@primary, 0.6);
+        color: #000;
+        height: 100%;
+
+        padding: 5px 10px;
+        margin: auto 5px;
+
+        border-radius: 3px;
+
+        font-size: 0.9em;
+        font-weight: 700;
+
+        width: max-content;
+
+        user-select: none;
+
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          background: @primary;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+
+  a.btn.show_project {
+    height: 2em;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin: 10px auto 5px 5px;
+
+    color: @font_color;
+    font-weight: bold;
+    border: 3px solid @primary;
+    background: @background3;
+
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      transition: all 0.15s ease-in-out;
+      background: @primary;
+      color: #000;
+
+    }
+  }
+}

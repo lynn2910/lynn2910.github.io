@@ -1,11 +1,14 @@
 @import (css) url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import (css) url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
+@import 'nav';
 
-@background: #151515;
-@background2: #181818;
-@primary: #00DF9E;
-@secondary: #CC0041;
-@secondary_dark: rgba(204, 0, 65, 0.48);
+@background: #0d182c;
+@background2: #040c1f;
+@background3: #151515;
+@primary: #fee9be;
+@secondary: #555667;
+@secondary_dark: rgba(@secondary, 0.48);
+@font_color: #fff;
 
 * {
   box-sizing: border-box;
@@ -16,6 +19,9 @@ body {
   font-family: "Raleway", system-ui;
   color: #fff;
   background: #151515;
+
+  margin: 0;
+  padding: 0;
 }
 
 main {
@@ -24,12 +30,11 @@ main {
   left: 0;
   z-index: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - @full_height);
 
-  margin: 0;
+  margin: @full_height 0 0 0;
   padding: 0;
 }
-
 
 .elite {
   font-family: "Special Elite", system-ui;
@@ -45,6 +50,8 @@ button, .btn {
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  text-decoration: none;
 
   background: linear-gradient(64deg, #3b3d42 0%, #1d1e23 100%);
 
@@ -78,7 +85,7 @@ button, .btn {
   p {
     margin-left: 10px;
 
-    color: #fff;
+    color: @font_color;
     font-weight: bold;
     text-decoration: none;
   }
@@ -89,5 +96,99 @@ button, .btn {
 
   &.secondary svg {
     color: @secondary;
+  }
+}
+
+.bg {
+  position: absolute;
+  z-index: -2;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  filter: blur(60px);
+
+  span {
+    height: var(--w, 50px);
+    width: var(--w, 50px);
+
+
+    &.primary, &.pyra {
+      background: @primary;
+    }
+    &:not(.primary), &.secondary, &.mythra {
+      background: @secondary;
+    }
+
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+  }
+}
+
+footer {
+  @h: 50px;
+  height: @h;
+
+  width: fit-content;
+  padding: 10px 50px;
+
+  margin: 50px auto 20px auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: calc(@h / 2);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+
+  background: rgba(21, 21, 21, 0.35);
+
+  backdrop-filter: blur(17px);
+
+  p {
+    margin: auto;
+
+    text-align: center;
+    font-weight: 400;
+    color: #999;
+  }
+}
+
+.info_box {
+  @color: #6597e4;
+
+  width: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 10px 15px;
+
+  border: 3px solid @color;
+  border-radius: 7px;
+
+  background: rgba(@color, 0.1);
+
+  margin: 10px auto;
+
+  &.warning, &.progress {
+    @color: #e2c975;
+    border: 3px solid @color;
+    background: rgba(@color, 0.1);
+  }
+  &.success {
+    @color: #65e47e;
+    border: 3px solid @color;
+    background: rgba(@color, 0.1);
+  }
+  &.error {
+    @color: #e46565;
+    border: 3px solid @color;
+    background: rgba(@color, 0.1);
   }
 }

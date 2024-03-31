@@ -24,28 +24,20 @@
 <script setup lang="ts">
 import ProjectBox from "@/components/home/projects/ProjectBox.vue";
 import {
-  get_all_articles,
-  type ProjectDeclaration,
   type ProjectProperties,
-  type TreeFolder
 } from '@/assets/scripts/projects'
-import projectsDeclaration from "/public/projects/declaration.json";
+import { projects } from "@/assets/scripts/projects_store";
 import {type Ref, ref} from "vue";
 
 let shown_projects: Ref<ProjectProperties[]> = ref([]);
 
 const MAX_PROJECTS_SHOWN = 4;
 
-console.log(projectsDeclaration)
-
-let projects = get_all_articles(projectsDeclaration)
-
 let registered_projects = 0;
 
 let sorted_projects = projects.sort((p1, p2) => p2.score - p1.score);
 
 for (let p of sorted_projects){
-  console.log(registered_projects)
   if (registered_projects >= MAX_PROJECTS_SHOWN)
     break;
 

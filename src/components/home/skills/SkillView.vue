@@ -77,7 +77,8 @@ const skills = [
       { n: "Rédiger un rapport" },
       { n: "Réaliser un diaporama professionnel" },
       { n: "Rédiger un article scientifique" },
-      { n: "Produire un résumé/une synthèse" }
+      { n: "Produire un résumé/une synthèse" },
+      { n: "Documentation de logiciels et librairies" },
     ]
   }
 ];
