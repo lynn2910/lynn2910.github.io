@@ -53,7 +53,7 @@ const headers: ProjectViewHeaders = [
     </div>
 
     <div class="toast success">
-      <p>Pour le moment, le projet est toujours en développement</p>
+      <p><strong>Pour le moment, le projet est toujours en développement</strong></p>
     </div>
   </ProjectSection>
 </template>

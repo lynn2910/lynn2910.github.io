@@ -73,9 +73,10 @@ export const iut_projects: ProjectDeclaration[] = [
       description: "Un site web informatif développé en équipe de 5 sur une entreprise française du numérique",
       links: [
         { type: "github", url: "https://github.com/lynn2910/galadrim_chartreuse" },
-        { type: "website", url: "https://cedriccolin.github.io/galadrim_chartreuse" }
+        { type: "website", url: "https://cedriccolin.github.io/galadrim_chartreuse" },
+        { type: "gitlab", url: "https://galadrim-chartreuse-cedriccolin-533234ebad0ef47fce28e194b3b878b.gitlab.io/" }
       ],
-      skills: ["HTML5", "CSS3", "Javascript"]
+      skills: ["HTML5", "CSS3", "Javascript", "3D (three.js)"]
     },
     url: "/project/universite/galadrim-chartreuse",
     content_path: "GaladrimChartreuse",

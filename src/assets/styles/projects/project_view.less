@@ -11,6 +11,11 @@
   .h5 {margin-left: @m * 4;}
   .h6 {margin-left: @m * 5;}
 
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    display: inline-grid;
+  }
+
+
   #go_back {
     position: fixed;
     top: 3em;
@@ -175,8 +180,6 @@
         border-radius: 7px;
         padding: 10px 15px;
 
-        font-weight: bold;
-
         width: fit-content;
         margin: auto;
 
@@ -197,6 +200,11 @@
           border-color: #65e4b5;
           background: rgba(#65e4b5, 0.2);
         }
+      }
+
+      img {
+        max-width: 75%;
+        margin: 10px auto;
       }
     }
   }

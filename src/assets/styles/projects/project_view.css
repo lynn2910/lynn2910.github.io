@@ -304,6 +304,14 @@ footer p {
 #project_view .h6 {
   margin-left: 3.5em;
 }
+#project_view .h1,
+#project_view .h2,
+#project_view .h3,
+#project_view .h4,
+#project_view .h5,
+#project_view .h6 {
+  display: inline-grid;
+}
 #project_view #go_back {
   position: fixed;
   top: 3em;
@@ -423,7 +431,6 @@ footer p {
 #project_view #project_content .body .toast {
   border-radius: 7px;
   padding: 10px 15px;
-  font-weight: bold;
   width: fit-content;
   margin: auto;
   border: 2px solid #6597e4;
@@ -441,5 +448,9 @@ footer p {
 #project_view #project_content .body .toast.success {
   border-color: #65e4b5;
   background: rgba(101, 228, 181, 0.2);
+}
+#project_view #project_content .body img {
+  max-width: 75%;
+  margin: 10px auto;
 }
 /*# sourceMappingURL=project_view.css.map */
