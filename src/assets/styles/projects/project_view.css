@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
 nav {
   height: 60px;
-  min-width: 400px;
-  max-width: 100%;
+  min-width: 600px;
   user-select: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -140,7 +139,7 @@ nav.animate .home {
     opacity: 1;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 625px) {
   nav {
     flex-direction: column;
     min-width: 200px;
@@ -367,17 +366,38 @@ footer p {
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 50%;
+  top: 3em;
+  max-height: calc(100% - 6em);
   right: 3px;
-  transform: translateY(-50%);
   height: 60vh;
   width: 18%;
-  border-top: 3px solid #fee9be;
-  border-left: 3px solid #fee9be;
-  border-bottom: 3px solid #fee9be;
+  border-top: 1px solid #fee9be;
+  border-left: 1px solid #fee9be;
+  border-bottom: 1px solid #fee9be;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   padding: 0 10px 10px 20px;
+}
+#project_view #project_tree.closed {
+  height: fit-content;
+  padding-bottom: 0;
+}
+#project_view #project_tree.closed .content {
+  height: 0;
+  overflow: hidden;
+}
+#project_view #project_tree .head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#project_view #project_tree .head svg {
+  margin-left: auto;
+}
+#project_view #project_tree .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 #project_view #project_tree a {
   color: #fff;
@@ -478,5 +498,54 @@ footer p {
 #project_view #project_content .body img {
   max-width: 75%;
   margin: 10px auto;
+}
+@media (max-width: 625px) {
+  #project_view #project_content {
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+  #project_view #project_tree {
+    top: 2em;
+    right: 1em;
+  }
+  #project_view #project_tree.closed {
+    padding: 0;
+    width: 4em;
+    transform: translateX(1em);
+  }
+  #project_view #project_tree.closed .head {
+    padding: 10px;
+  }
+  #project_view #project_tree.closed .head h2 {
+    display: none;
+  }
+  #project_view #project_tree.closed .head svg {
+    margin: 0;
+  }
+  #project_view #project_tree.opened {
+    position: fixed;
+    z-index: 200;
+    top: 2em;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 7px;
+    border: 1px solid #fee9be;
+  }
+  #project_view #project_tree.opened .content a {
+    font-size: 1.1em;
+  }
+  #project_view #go_back {
+    padding: 10px;
+    top: 2em;
+    left: 1em;
+  }
+  #project_view #go_back p {
+    display: none;
+  }
+  #project_view #go_back svg {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=project_view.css.map */

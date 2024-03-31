@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 export type ProjectViewHeaders = Array<{ name: String, id: String, level: Number }>;
 
 defineProps({
@@ -15,6 +17,12 @@ function goToId(id: string){
   if (element) {
     element.scrollIntoView({ behavior: "smooth" })
   }
+}
+
+let is_nav_open = ref(false);
+
+function navigation_open_close(){
+  is_nav_open.value = !is_nav_open.value;
 }
 
 </script>
@@ -35,14 +43,19 @@ function goToId(id: string){
         <slot />
       </div>
     </div>
-    <div id="project_tree">
-      <h2>Navigation</h2>
-      <p v-if="!headers || headers.length < 1">Aucun titre</p>
-      <a v-for="h in headers"
-         :class="`h${h.level}`"
-         :href="`#${h.id}`"
-         v-on:click="goToId(h.id as string)"
-         :key="h.id as string">{{ h.name }}</a>
+    <div id="project_tree" :class="is_nav_open ? 'opened' : 'closed'">
+      <div class="head">
+        <h2>Navigation</h2>
+        <svg @click="navigation_open_close()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: currentColor"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>
+      </div>
+      <div class="content">
+        <p v-if="!headers || headers.length < 1">Aucun titre</p>
+        <a v-for="h in headers"
+           :class="`h${h.level}`"
+           :href="`#${h.id}`"
+           v-on:click="goToId(h.id as string)"
+           :key="h.id as string">{{ h.name }}</a>
+      </div>
     </div>
   </div>
 </template>

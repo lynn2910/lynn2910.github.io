@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
 nav {
   height: 60px;
-  min-width: 400px;
-  max-width: 100%;
+  min-width: 600px;
   user-select: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -140,7 +139,7 @@ nav.animate .home {
     opacity: 1;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 625px) {
   nav {
     flex-direction: column;
     min-width: 200px;
@@ -514,7 +513,7 @@ footer p {
 #contact a.btn {
   margin: 50px auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 625px) {
   #presentation {
     width: 90%;
   }

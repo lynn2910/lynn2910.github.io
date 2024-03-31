@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
 nav {
   height: 60px;
-  min-width: 400px;
-  max-width: 100%;
+  min-width: 600px;
   user-select: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -60,6 +59,18 @@ nav .links a {
   position: relative;
   text-decoration: none;
   width: max-content;
+}
+nav .links a::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  transition: width 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 nav .links a:hover::after {
   width: 100%;
@@ -128,7 +139,7 @@ nav.animate .home {
     opacity: 1;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 625px) {
   nav {
     flex-direction: column;
     min-width: 200px;
@@ -142,6 +153,9 @@ nav.animate .home {
     width: 100%;
     height: fit-content;
     flex-direction: column;
+  }
+  nav .links a::after {
+    transform: translateX(-50%);
   }
   nav a.home {
     margin: 15px auto;
