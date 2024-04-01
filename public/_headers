@@ -1,7 +1,19 @@
 /images/*
 max-age=3600
 
+/images/**/*
+max-age=3600
+
+/audio/*
+max-age=3600
+
+/audio/**/*
+max-age=3600
+
 /svg/*
+max-age=3600
+
+/svg/**/*
 max-age=3600
 
 /documents/*

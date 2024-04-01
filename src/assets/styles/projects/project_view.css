@@ -438,6 +438,9 @@ footer p {
 #project_view #project_content .body a {
   color: #6597e4;
 }
+#project_view #project_content .body audio {
+  height: 2em;
+}
 #project_view #project_content .body pre,
 #project_view #project_content .body code,
 #project_view #project_content .body pre code {

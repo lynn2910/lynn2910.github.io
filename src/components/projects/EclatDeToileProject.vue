@@ -2,12 +2,48 @@
 import ProjectSection, { type ProjectViewHeaders } from '@/components/project/ProjectSection.vue'
 import SaeToast from '@/components/projects/comp/SaeToast.vue'
 
-let headers: ProjectViewHeaders = [];
+let headers: ProjectViewHeaders = [
+  {
+    name: "Le projet 'Eclat de Toile'",
+    id: "top",
+    level: 1
+  },
+  {
+    name: "La génération des images requises",
+    id: "3d",
+    level: 2
+  },
+  {
+    name: "Le développement",
+    id: "dev",
+    level: 2
+  },
+  {
+    name: "L'interface",
+    id: "interface",
+    level: 3
+  },
+  {
+    name: "Réalisation du site web et de l'API",
+    id: "dev2",
+    level: 3
+  },
+  {
+    name: "La partie réseau",
+    id: "reseau",
+    level: 2
+  },
+  {
+    name: "Rétrospective",
+    id: "result",
+    level: 2
+  }
+];
 </script>
 
 <template>
   <ProjectSection :headers="headers" title="Eclat de Toile">
-    <h1>Le projet 'Eclat de Toile':</h1>
+    <h1 id="top">Le projet 'Eclat de Toile'</h1>
     <SaeToast></SaeToast>
 
     <p>Cette SAE avait pour objectif de réaliser un site de e-commerce pour vendre des pots de peinture.</p>
@@ -32,7 +68,7 @@ let headers: ProjectViewHeaders = [];
         <p>Cependant, quand le professeur responsable de la SAE a vu ce qu'on faisais, il nous as interdit de changer l'interface en affirmant qu'on ne gagnerais rien et, je cite, "qu'il s'en fiche".<br><i>Les ébauches ont été gardées afin de (potentiellement) refaire le site en off de notre coté</i></p>
       </div>
 
-      <h3 id="dev2">Réalisation du site web</h3>
+      <h3 id="dev2">Réalisation du site web et de l'API</h3>
       <div class="h3">
         <p>Lors des deux premiers livrables, nous avions pour objectif de compléter les requêtes SQL afin de lier le site à la base de donnée en ne modifiant que le code python derrière.</p>
         <p>Le dernier livrable, lui, étant séparé en 5 tâches, où chaque tâche est désignée à un étudiant. Mon sujet était les adresses et coordonnées du client. J'ai dû implémenter le système de gestion des adresses, notamment en prenant en compte les limites (nombre d'adresses, ne pas supprimer une adresse qui a déjà été utilisée dans une commande), mais j'ai également implémenté un système d'adresses favorites, le tout en respectant le cahier des charges fournis par le professeur.</p>
