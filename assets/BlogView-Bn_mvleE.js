@@ -1,0 +1,1 @@
+import{d as s,c as a,f as n,F as o,a as e,o as t,H as l}from"./index-DonNLUZR.js";const r=e("main",null,[e("div",{style:{display:"flex","align-items":"center"}},[e("div",{class:"info_box progress"},[e("p",null,[e("strong",null,"Cette page est en cours de développement.")])])])],-1),m=s({__name:"BlogView",setup(c){return(p,d)=>(t(),a(o,null,[n(l),r],64))}});export{m as default};

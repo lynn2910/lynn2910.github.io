@@ -1,0 +1,1 @@
+import{d as e,c as t,f as c,o as a,s as o,_ as s}from"./index-DonNLUZR.js";const n={class:"contact_container"},_=e({__name:"ContactView",setup(r){return(d,i)=>(a(),t("div",n,[c(o)]))}}),f=s(_,[["__scopeId","data-v-c6d7648d"]]);export{f as default};

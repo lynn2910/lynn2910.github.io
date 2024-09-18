@@ -1,1 +1,0 @@
-import{d as e,c as t,f as a,o as c,s as o,_ as s}from"./index-DO6xxhSe.js";const n={class:"contact_container"},_=e({__name:"ContactView",setup(r){return(d,i)=>(c(),t("div",n,[a(o)]))}}),f=s(_,[["__scopeId","data-v-da99831b"]]);export{f as default};
