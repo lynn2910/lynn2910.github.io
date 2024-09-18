@@ -146,7 +146,7 @@ export const iut_projects: ProjectDeclaration[] = [
     },
     url: "/project/universite/trifle-kamisado",
     content_path: "TrifleProject",
-    score: 800
+    score: 1800
   }
 ];
 

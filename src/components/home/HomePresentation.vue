@@ -4,7 +4,9 @@
 <template>
   <section id="presentation">
     <h2>Je me présente</h2>
-    <p>Je m'appelle Colin Cédric, actuellement étudiant de 18 ans en première année de Brevet Universitaire de Technologie en informatique à l'université Nord Franche-Comté.<br><br>Au cours des trois dernières années, j'ai acquis une solide expérience dans diverses technologies informatiques, couvrant un large éventail de domaines, de la conception de sites web à la création de logiciels, en passant par l'utilisation d'API et la programmation de bas niveau. Titulaire d'un baccalauréat général avec une spécialisation en Mathématiques et Numérique, ainsi qu'en Science de l'Informatique.</p>
+    <p>Étudiant de 19 ans en 2e année de BUT (Brevet Universitaire de Technologie) en informatique à Belfort.</p>
+    <p>Au cours des quatre dernières années, j'ai pu acquérir une solide expérience dans diverses technologies liées à l'informatique, couvrant un large éventail de domaines, de la conception de sites web à la création de logiciels, en passant par l'utilisation d'API et la programmation de bas niveau. Titulaire d'un baccalauréat général avec une spécialisation en Mathématiques et Numérique Science de l'Informatique (appelé NSI).</p>
+    <p>Grâce à mes nombreux projets personnels et aux projets universitaires, j'ai également pu évoluer et travailler en équipe avec mes camarades à travers des projets aussi divers qu'intéressant.</p>
   </section>
 </template>
 
