@@ -2,6 +2,10 @@
 module.exports = {
     content: ['./src/**/*.{html,js,ts,svelte,md,mdx,svx,sv}'],
     theme: {
+        fontFamily: {
+            display: ["Roboto Slab", "serif"],
+            title: ["EB Garamond", "serif"]
+        },
         extend: {
             colors: {
                 'brown-coffee': 'hsl(4, 26%, 23%)',
