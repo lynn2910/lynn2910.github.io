@@ -4,12 +4,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                // https://coolors.co/palette/b68446-739b99-e3c08c-4c6c72-262112
-                bronze: 'hsla(33, 44%, 49%, 1)',
-                'cambridge-blue': 'hsla(177, 17%, 53%, 1)',
-                tan: 'hsla(36, 61%, 72%, 1)',
-                'paynes-gray': 'hsla(189, 20%, 37%, 1)',
-                'eerie-black': 'hsl(40,35%,7%)',
+                'brown-coffee': 'hsl(4, 26%, 23%)',
+                'sepia': 'hsl(35, 70%, 26%)',
+                'light-gray': 'hsl(0, 0%, 74%)',
+                'mountbatten-pink': 'hsl(329, 12%, 54%)',
+                'eerie-black': 'hsl(0, 0%, 10%)',
+                'alabaster': 'hsl(43, 41%, 91%)',
+                'old-lace': 'hsl(49, 55%, 94%)'
             },
         },
     },
