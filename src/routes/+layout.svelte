@@ -39,7 +39,7 @@
     {#snippet main()}
 
         <div class="flex flex-row items-center justify-center my-auto gap-10 w-full">
-            <a href="/portfolio/stage-but2">Portfolio stage BUT2</a>
+            <a href="{base}/portfolio/stage-but2">Portfolio stage BUT2</a>
         </div>
 
     {/snippet}

@@ -2,11 +2,13 @@
 	import type {Snippet} from "svelte";
 
 	const {
+		top_padding = "top-6",
 		left,
 		main,
 		right,
 		hidden = false
 	}: {
+		top_padding?: string
 		left?: Snippet,
 		main: Snippet,
 		right?: Snippet,
@@ -22,13 +24,13 @@
 </nav>
 
 {#if left}
-    <div class="absolute top-6 left-7">
+    <div class={"absolute left-6 " + top_padding}>
         {@render left()}
     </div>
 {/if}
 
 {#if right}
-    <div class="absolute top-5 right-5" hidden={hidden}>
+    <div class={"absolute right-6 " + top_padding} hidden={hidden}>
         {@render right()}
     </div>
 {/if}
