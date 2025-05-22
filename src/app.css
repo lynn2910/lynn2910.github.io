@@ -20,3 +20,8 @@ a {
 ::-moz-selection, ::selection {
     @apply bg-brown-coffee text-old-lace
 }
+
+body, html {
+    width: 100%;
+    height: 100%;
+}

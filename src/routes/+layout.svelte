@@ -40,7 +40,7 @@
 
     {#snippet main()}
 
-        <div class="flex flex-row items-center justify-center my-auto gap-10 w-full">
+        <div class="flex flex-row items-center justify-center my-auto gap-10 w-full h-full">
             <a href="{base}/portfolio/stage-but2">Portfolio stage BUT2</a>
         </div>
 
@@ -50,7 +50,7 @@
         <div class="flex flex-row items-center justify-end gap-2">
             {#each leftLinks as link}
                 <a href={link.href} aria-label="link-to-{link.name}" target={link.target || '_parent'}
-                   class="flex flex-row items-center cursor-pointer group select-none hover:text-paynes-gray">
+                   class="flex flex-row items-center cursor-pointer group select-none text-old-lace hover:text-mountbatten-pink">
                     <p class="font-semibold mr-2">{link.name.toUpperCase()}</p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
                          class="fill-current w-5 group-hover:-translate-y-1 transition duration-100 ease-in-out">
