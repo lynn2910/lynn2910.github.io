@@ -18,19 +18,19 @@
 </script>
 
 
-<nav class="fixed top-2 w-[calc(100vw-1rem)] mx-2 h-14 py-3 px-6 rounded-4xl bg-brown-coffee text-old-lace"
+<nav class="fixed z-40 top-2 w-[calc(100vw-1rem)] mx-2 h-14 py-3 px-6 rounded-4xl bg-brown-coffee text-old-lace"
      hidden={hidden}>
     {@render main()}
 </nav>
 
 {#if left}
-    <div class={"fixed left-6 " + top_padding}>
+    <div class={"fixed z-40 left-6 " + top_padding}>
         {@render left()}
     </div>
 {/if}
 
 {#if right}
-    <div class={"fixed right-6 " + top_padding} hidden={hidden}>
+    <div class={"fixed z-40 right-6 " + top_padding} hidden={hidden}>
         {@render right()}
     </div>
 {/if}
