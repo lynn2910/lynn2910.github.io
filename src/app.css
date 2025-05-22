@@ -13,10 +13,6 @@ p, label, a {
     @apply font-display
 }
 
-a {
-    @apply no-underline cursor-none;
-}
-
 ::-moz-selection, ::selection {
     @apply bg-brown-coffee text-old-lace
 }

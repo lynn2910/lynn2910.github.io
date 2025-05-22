@@ -26,7 +26,7 @@
     {#snippet main()}
         <div class="flex flex-col overflow-hidden sm:flex-row gap-10 h-full w-full items-center content-center justify-center">
             {#each links as link}
-                <a class="hover:underline" href={link.href}>{link.name}</a>
+                <a class="no-underline hover:underline" href={link.href}>{link.name}</a>
             {/each}
         </div>
     {/snippet}
