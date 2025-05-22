@@ -13,12 +13,17 @@
 		y = mouse_event.y;
 
 		const target = mouse_event.target as HTMLElement;
-		if (target && typeof target.closest === 'function') {
+		if (target && (typeof target.closest === 'function' || target.classList.contains('cursor-pointer'))) {
 			isHoveringLink = !!hoverable_tags.some(ht => target.closest(ht));
         } else {
 			let el = target;
 			let found = false;
 			while (el && el !== document.body) {
+				if (el.classList.contains('cursor-pointer')) {
+					found = true;
+					break;
+                }
+
 				if (hoverable_tags.includes(el.tagName.toLowerCase())) {
 					found = true;
 					break;
