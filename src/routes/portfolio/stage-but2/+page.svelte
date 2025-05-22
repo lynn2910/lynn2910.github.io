@@ -10,10 +10,10 @@
 	]
 </script>
 
-<Navbar top_padding="top-4.5">
+<Navbar>
     {#snippet left()}
         <a href={base || '/'}
-           class="flex flex-row items-center gap-2 py-1 px-2 pr-3 rounded-4xl select-none border-2 border-old-lace text-old-lace cursor-pointer hover:bg-old-lace/25">
+           class="h-fit flex flex-row items-center gap-2 py-1 px-2 pr-3 rounded-4xl select-none border-2 border-old-lace text-old-lace cursor-pointer hover:bg-old-lace/25">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left"
                  viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -24,7 +24,7 @@
     {/snippet}
 
     {#snippet main()}
-        <div class="flex flex-row gap-10 h-full items-center content-center justify-center w-full">
+        <div class="flex flex-col overflow-hidden sm:flex-row gap-10 h-full w-full items-center content-center justify-center">
             {#each links as link}
                 <a class="hover:underline" href={link.href}>{link.name}</a>
             {/each}
