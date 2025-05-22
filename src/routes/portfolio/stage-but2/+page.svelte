@@ -1,6 +1,12 @@
 <script lang="ts">
 	import Navbar from "$lib/components/navigation/Navbar.svelte";
 	import {base} from "$app/paths";
+
+	const links: { href: string, name: string }[] = [
+		{href: '#', name: "Entreprise"},
+		{href: '#', name: "Mission"},
+		{href: '#', name: "Savoir-faire"},
+	]
 </script>
 
 <Navbar top_padding="top-4.5">
@@ -17,10 +23,11 @@
     {/snippet}
 
     {#snippet main()}
-        <div class="flex flex-row gap-10 justify-center w-full">
-            A B C
-
-            <p>{base}</p>
+        <div class="flex flex-row gap-10 h-full items-center content-center justify-center w-full">
+            {#each links as link}
+                <a class="hover:underline" href={link.href}>{link.name}</a>
+            {/each}
         </div>
     {/snippet}
 </Navbar>
+
