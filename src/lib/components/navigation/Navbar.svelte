@@ -23,7 +23,7 @@
 	}
 </script>
 
-<nav class="overflow-hidden">
+<nav class="overflow-hidden absolute">
     <button
             class="fixed z-50 max-sm:top-3 max-sm:left-3 sm:hidden p-2 h-10 w-10 rounded-full bg-brown-coffee text-old-lace"
             onclick={toggleNav}
