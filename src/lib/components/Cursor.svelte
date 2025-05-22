@@ -14,7 +14,7 @@
 
 		const target = mouse_event.target as HTMLElement;
 		if (target && typeof target.closest === 'function') {
-			isHoveringLink = !!target.closest('a');
+			isHoveringLink = !!hoverable_tags.some(ht => target.closest(ht));
         } else {
 			let el = target;
 			let found = false;
