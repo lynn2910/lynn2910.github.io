@@ -3,7 +3,7 @@
 	import {page} from '$app/state'
 	import {base} from '$app/paths'
 	import Navbar from "$lib/components/navigation/Navbar.svelte";
-	import NavDropDown from "$lib/components/navigation/NavDropDown.svelte";
+	import Cursor from "$lib/components/Cursor.svelte";
 
 	let {children} = $props();
 
@@ -20,6 +20,8 @@
 		{name: 'email', href: 'mailto:cedric.colin35@gmail.com'}
 	]
 </script>
+
+<Cursor/>
 
 <Navbar hidden={shouldHideNavbar}>
     {#snippet left()}
