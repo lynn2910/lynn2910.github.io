@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from "$lib/components/navigation/Navbar.svelte";
 	import {base} from "$app/paths";
+	import But2Grid from "$lib/components/illustrations/But2Grid.svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#', name: "Entreprise"},
@@ -30,4 +31,27 @@
         </div>
     {/snippet}
 </Navbar>
+
+<div class="w-screen h-screen relative">
+    <!-- Grid -->
+    <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
+        <But2Grid/>
+    </div>
+    <!-- Title -->
+    <div class="absolute top-2/5 left-2/5 font-title font-extrabold">
+        <h1 class="text-8xl ">Mon portfolio de stage</h1>
+        <div class="relative text-6xl font-bold ml-64 mt-5 w-fit">
+            <div class="absolute -bottom-1.5 mt-2 h-3 px-2 w-full bg-mountbatten-pink"></div>
+            <h2>Cédric COLIN</h2>
+        </div>
+    </div>
+    <!-- Paragraphe -->
+    <p class="bg-old-lace absolute left-10 p-3 bottom-32 w-4/6">
+        Bienvenue sur mon portfolio de stage de 2e année de BUT Informatique ! Je suis ravi de vous embarquer
+        dans mon expérience en entreprise. Vous découvrirez un aperçu des connaissances que j'ai pu consolider pendant
+        ma formation, notamment à travers le projet concret sur lequel j'ai travaillé. Mais au-delà de cette mission, ce
+        portfolio mettra également en lumière comment ce stage a été l'occasion de mobiliser et de développer des
+        savoirs-faire essentielles de ma formation. Alors, préparez-vous à explorer les savoir-faire que j'ai acquis et
+        mis en œuvre durant ce stage passionnant !</p>
+</div>
 
