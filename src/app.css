@@ -3,7 +3,7 @@
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@config '../tailwind.config.cjs'
+@config '../tailwind.config.cjs';
 
 h1, h2, h3, h4, h5, h6 {
     @apply font-title;
