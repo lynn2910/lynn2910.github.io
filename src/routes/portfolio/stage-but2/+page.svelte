@@ -34,11 +34,11 @@
 
 <div class="w-screen h-screen relative">
     <!-- Grid -->
-    <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
+    <div class="absolute z-0 top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
         <But2Grid/>
     </div>
     <!-- Title -->
-    <div class="absolute top-2/5 left-2/5 font-title font-extrabold">
+    <div class="absolute z-0 top-2/5 left-2/5 font-title font-extrabold">
         <h1 class="text-8xl ">Mon portfolio de stage</h1>
         <div class="relative text-6xl font-bold ml-64 mt-5 w-fit">
             <div class="absolute -bottom-1.5 mt-2 h-3 px-2 w-full bg-mountbatten-pink"></div>
@@ -46,7 +46,7 @@
         </div>
     </div>
     <!-- Paragraphe -->
-    <p class="bg-old-lace absolute left-10 p-3 bottom-32 w-4/6">
+    <p class="bg-old-lace absolute z-0 left-10 p-3 bottom-32 w-4/6">
         Bienvenue sur mon portfolio de stage de 2e année de BUT Informatique ! Je suis ravi de vous embarquer
         dans mon expérience en entreprise. Vous découvrirez un aperçu des connaissances que j'ai pu consolider pendant
         ma formation, notamment à travers le projet concret sur lequel j'ai travaillé. Mais au-delà de cette mission, ce

@@ -14,5 +14,9 @@ p, label, a {
 }
 
 a {
-    @apply no-underline;
+    @apply no-underline cursor-none;
+}
+
+::-moz-selection, ::selection {
+    @apply bg-brown-coffee text-old-lace
 }
