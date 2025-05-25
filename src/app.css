@@ -10,14 +10,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, label, a {
-    @apply font-display
+    @apply font-display;
 }
+
+a, button {
+    @apply cursor-none;
+}
+
+.btn {
+    @apply flex flex-row gap-5 items-center text-center bg-brown-coffee hover:bg-sepia transition-all duration-150 text-old-lace px-4 py-2 rounded-lg;
+}
+
 
 ::-moz-selection, ::selection {
     @apply bg-brown-coffee text-old-lace
 }
 
+h2 {
+    @apply font-extrabold font-title
+}
+
 body, html {
     width: 100%;
     height: 100%;
+
+    cursor: none !important;
 }
