@@ -155,6 +155,10 @@
                 </ul>
             {/snippet}
 
+            {#snippet icon()}
+                <img src="/svg/but2/suivi_projet_but2.svg" alt="Suivi des projets">
+            {/snippet}
+
             {#snippet details()}
                 Voici des détails
             {/snippet}
@@ -166,6 +170,10 @@
                     <li>Configurer chaque comité</li>
                     <li>Exporter le calendrier au format Excel</li>
                 </ul>
+            {/snippet}
+
+            {#snippet icon()}
+                <img src="/svg/but2/calendar_management_but2.svg" alt="Gestion du calendrier">
             {/snippet}
 
             {#snippet details()}
@@ -181,6 +189,10 @@
                 </ul>
             {/snippet}
 
+            {#snippet icon()}
+                <img src="/svg/but2/odj_but2.svg" alt="Gestion des ordres du jour">
+            {/snippet}
+
             {#snippet details()}
                 Voici des détails
             {/snippet}
@@ -194,6 +206,10 @@
                 </ul>
             {/snippet}
 
+            {#snippet icon()}
+                <img src="/svg/but2/rdd_but2.svg" alt="Gestion des relevés de décisions">
+            {/snippet}
+
             {#snippet details()}
                 Voici des détails
             {/snippet}
@@ -205,6 +221,10 @@
                     <li>Héberger les supports de présentation</li>
                     <li>Améliorer l’accès des documents aux acteurs</li>
                 </ul>
+            {/snippet}
+
+            {#snippet icon()}
+                <img src="/svg/but2/documents_but2.svg" alt="Gestion des supports de documents">
             {/snippet}
 
             {#snippet details()}

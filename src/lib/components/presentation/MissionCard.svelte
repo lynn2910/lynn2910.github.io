@@ -38,14 +38,16 @@
 	}
 </script>
 
-<div class="bg-old-lace hover:bg-old-lace border-2 border-transparent hover:border-brown-coffee rounded-xl rounded-b-xl h-72 w-1/6 min-w-56 max-w-1/6 flex flex-col transition-colors duration-100">
+<div class="bg-old-lace hover:bg-old-lace border-2 border-transparent hover:border-brown-coffee rounded-xl rounded-b-xl h-96 w-1/6 min-w-56 max-w-1/6 flex flex-col transition-colors duration-100">
     <div class="bg-brown-coffee p-2 text-center rounded-t-lg text-old-lace h-16 flex flex-row items-center justify-center">
         <h2>{title}</h2>
     </div>
 
     <div class="mx-2 mt-3">
         {#if icon}
-            {@render icon()}
+            <div class="w-full flex flex-row items-center justify-center py-3">
+                {@render icon()}
+            </div>
         {/if}
 
         {@render main()}
