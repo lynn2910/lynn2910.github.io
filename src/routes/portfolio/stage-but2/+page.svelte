@@ -4,6 +4,7 @@
 	import But2Grid from "$lib/components/illustrations/But2Grid.svelte";
 	import PinkTitle from "$lib/components/presentation/PinkTitle.svelte";
 	import MissionCard from "$lib/components/presentation/MissionCard.svelte";
+	import TabsContainer, {type Tab} from "$lib/components/navigation/TabsContainer.svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#entreprise', name: "Entreprise"},
@@ -11,7 +12,16 @@
 		{href: '#savoir_faire', name: "Savoir-faire"},
 	];
 
-	const carouselItems = [];
+	const savoir_faire_tabs: Tab[] = [
+		{name: "Compétence 1", id: "comp_1"},
+		{name: "Compétence 2", id: "comp_2"}
+	];
+
+	let savoir_faire_active_tab: string = $state(savoir_faire_tabs[0]?.id);
+
+	function handleTabClick(tab_id: string) {
+		savoir_faire_active_tab = tab_id;
+	}
 </script>
 
 <svelte:head>
@@ -40,6 +50,7 @@
     {/snippet}
 </Navbar>
 
+<!-- Home -->
 <div class="w-screen h-screen relative">
     <!-- Grid -->
     <div class="absolute z-0 top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
@@ -63,6 +74,7 @@
         mis en œuvre durant ce stage passionnant !</p>
 </div>
 
+<!-- Entreprise -->
 <div>
     <h2 id="entreprise" class="text-4xl text-center mt-3 mb-16">Entreprise</h2>
 
@@ -124,6 +136,7 @@
     </div>
 </div>
 
+<!-- Mission -->
 <div>
     <h2 id="mission" class="text-4xl text-center my-16">Mission</h2>
 
@@ -131,7 +144,10 @@
     <div class="flex flex-col md:flex-row gap-5 mx-5 sm:mx-10 md:mx-20 2xl:mx-56 items-stretch">
         <div>
             <PinkTitle title="Mon stage" subtitle="02-01"/>
-            <p>Mon stage chez Néolia a consisté à développer un logiciel de <b>dématérialisation pour les comités
+            <p class="p-2 pl-4 text-justify">Mon stage chez Néolia a consisté à développer un logiciel de <b>dématérialisation
+                pour
+                les
+                comités
                 d’engagement de la DSIL</b>. L'objectif était <b>d'optimiser</b> ce processus en <b>simplifiant</b> les
                 interactions et le workflow. Cette mission m'a permis d'acquérir de <b>nouveaux savoirs et savoir-faire
                     dans de nombreux domaines</b> enseignés au sein de ma formation et de découvrir les réalités du
@@ -234,6 +250,29 @@
     </div>
 </div>
 
+<!-- Savoir & savoir-faire -->
 <div>
     <h2 id="savoir_faire" class="text-4xl text-center my-16">Savoir & savoir-faire</h2>
+
+    <div class="mx-5 sm:mx-10 md:mx-20 2xl:mx-56">
+        <TabsContainer activeTabId={savoir_faire_active_tab} on_tab_clicked={handleTabClick} tabs={savoir_faire_tabs}>
+            {#if savoir_faire_active_tab === "comp_1"}
+                <h2>Compétence 1</h2>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            {:else}
+                <h2>Compétence 2</h2>
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            {/if}
+        </TabsContainer>
+    </div>
 </div>
