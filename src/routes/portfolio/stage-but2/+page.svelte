@@ -3,12 +3,15 @@
 	import {base} from "$app/paths";
 	import But2Grid from "$lib/components/illustrations/But2Grid.svelte";
 	import PinkTitle from "$lib/components/presentation/PinkTitle.svelte";
+	import MissionCard from "$lib/components/presentation/MissionCard.svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#entreprise', name: "Entreprise"},
 		{href: '#mission', name: "Mission"},
 		{href: '#savoir_faire', name: "Savoir-faire"},
-	]
+	];
+
+	const carouselItems = [];
 </script>
 
 <svelte:head>
@@ -119,18 +122,96 @@
             </div>
         </div>
     </div>
-
-    <!--    <div class="grid grid-cols-1 sm:grid-cols-4 ">-->
-    <!--        <div class="col-span-full sm:col-span-1 flex flex-col gap-5">-->
-
-    <!--        </div>-->
-
-    <!--        -->
-    <!--    </div>-->
 </div>
 
 <div>
     <h2 id="mission" class="text-4xl text-center my-16">Mission</h2>
+
+    <!-- Description mission -->
+    <div class="flex flex-col md:flex-row gap-5 mx-5 sm:mx-10 md:mx-20 2xl:mx-56 items-stretch">
+        <div>
+            <PinkTitle title="Mon stage" subtitle="02-01"/>
+            <p>Mon stage chez Néolia a consisté à développer un logiciel de <b>dématérialisation pour les comités
+                d’engagement de la DSIL</b>. L'objectif était <b>d'optimiser</b> ce processus en <b>simplifiant</b> les
+                interactions et le workflow. Cette mission m'a permis d'acquérir de <b>nouveaux savoirs et savoir-faire
+                    dans de nombreux domaines</b> enseignés au sein de ma formation et de découvrir les réalités du
+                développement en entreprise, tout en renforçant mon <b>autonomie</b> et ma<b>rigueur</b>.</p>
+        </div>
+
+        <div class="flex items-center content-center px-2 py-1 bg-mountbatten-pink h-full w-full">
+            <h2 class="text-center text-xl text-old-lace h-full">
+                Dématérialisation du comité d'engagement DSIL
+            </h2>
+        </div>
+    </div>
+
+    <div class="flex flex-row flex-wrap mt-16 gap-5 mx-5 sm:mx-10 justify-center content-stretch w-fit">
+        <MissionCard title="Suivi des projets">
+            {#snippet main()}
+                <ul class="list-disc ml-4">
+                    <li>Suivi de la vie des projets</li>
+                    <li>Exportation des projets</li>
+                    <li>Faciliter le suivi des projets</li>
+                </ul>
+            {/snippet}
+
+            {#snippet details()}
+                Voici des détails
+            {/snippet}
+        </MissionCard>
+        <MissionCard title="Gestion du calendrier">
+            {#snippet main()}
+                <ul class="list-disc ml-4">
+                    <li>Définir les thèmes pour chaque projet</li>
+                    <li>Configurer chaque comité</li>
+                    <li>Exporter le calendrier au format Excel</li>
+                </ul>
+            {/snippet}
+
+            {#snippet details()}
+                Voici des détails
+            {/snippet}
+        </MissionCard>
+        <MissionCard title="Génération des ordres du jour">
+            {#snippet main()}
+                <ul class="list-disc ml-4">
+                    <li>Automatiser ce processus chronophage</li>
+                    <li>Exporter les ordres du jour au format Excel</li>
+                    <li>Transmission des ordres du jour par mail</li>
+                </ul>
+            {/snippet}
+
+            {#snippet details()}
+                Voici des détails
+            {/snippet}
+        </MissionCard>
+        <MissionCard title="Gérer les relevés de décision">
+            {#snippet main()}
+                <ul class="list-disc ml-4">
+                    <li>Saisir le relevé des décisions</li>
+                    <li>Exporter les relevés au format Excel</li>
+                    <li>Transmission par mail aux acteurs</li>
+                </ul>
+            {/snippet}
+
+            {#snippet details()}
+                Voici des détails
+            {/snippet}
+        </MissionCard>
+
+        <MissionCard title="Héberger les supports de documents">
+            {#snippet main()}
+                <ul class="list-disc ml-4">
+                    <li>Héberger les supports de présentation</li>
+                    <li>Améliorer l’accès des documents aux acteurs</li>
+                </ul>
+            {/snippet}
+
+            {#snippet details()}
+                Voici des détails
+            {/snippet}
+        </MissionCard>
+    </div>
 </div>
 
 <div>
