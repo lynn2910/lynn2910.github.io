@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type {Snippet} from "svelte";
+	import {onMount, type Snippet} from "svelte";
 	import {quintOut} from 'svelte/easing';
 	import {slide, fade} from 'svelte/transition';
 
@@ -13,12 +13,26 @@
 
 	let show_popup = $state(false);
 
+	onMount(() => {
+		const search_params = new URLSearchParams(window.location.search);
+		if (search_params.has('details') && search_params.get('details') === title) {
+			show_popup = true;
+		}
+	})
+
 	function openDetails() {
+		const search_params = new URLSearchParams(window.location.search);
+		search_params.set('details', title);
+		history.pushState({}, '', `${window.location.pathname}?${search_params.toString()}${window.location.hash}`);
 		show_popup = true;
 		document.body.style.overflow = "hidden";
 	}
 
 	function closeDetails() {
+		const search_params = new URLSearchParams(window.location.search);
+		search_params.delete('details');
+		history.pushState({}, '', `${window.location.pathname}?${search_params.toString()}${window.location.hash}`);
+
 		show_popup = false;
 		document.body.style.overflow = "";
 	}
@@ -50,12 +64,15 @@
             <div class="fixed z-20 top-0 left-0 w-screen h-screen bg-black/50"
                  onclick={() => closeDetails()}
                  transition:fade={{ duration: 150 }}></div>
-            <div class="fixed z-30 top-1/12 left-0 w-5/6 h-11/12 bg-old-lace rounded-r-xl"
+            <div class="fixed z-30 top-1/12 left-0 w-5/6 h-11/12 bg-old-lace rounded-r-xl p-4"
                  transition:slide={{ axis: 'x', duration: 300, easing: quintOut }}>
                 {@render details()}
                 <button class="absolute top-4 right-4 h-10 w-10 bg-brown-coffee text-old-lace p-2 rounded-full"
-                        onclick={closeDetails}>
-                    X
+                        onclick={closeDetails} aria-label="close details">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                         class="fill-current">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
                 </button>
             </div>
         {/if}
