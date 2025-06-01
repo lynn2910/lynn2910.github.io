@@ -5,6 +5,8 @@
 	import PinkTitle from "$lib/components/presentation/PinkTitle.svelte";
 	import MissionCard from "$lib/components/presentation/MissionCard.svelte";
 	import TabsContainer, {type Tab} from "$lib/components/navigation/TabsContainer.svelte";
+	import Comp1 from "$lib/components/presentation/but2/Comp1.svelte";
+	import Comp2 from "$lib/components/presentation/but2/Comp2.svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#entreprise', name: "Entreprise"},
@@ -251,27 +253,15 @@
 </div>
 
 <!-- Savoir & savoir-faire -->
-<div>
+<div class="h-screen">
     <h2 id="savoir_faire" class="text-4xl text-center my-16">Savoir & savoir-faire</h2>
 
-    <div class="mx-5 sm:mx-10 md:mx-20 2xl:mx-56">
+    <div class="mx-5 sm:mx-10 md:mx-20 2xl:mx-56 mb-10">
         <TabsContainer activeTabId={savoir_faire_active_tab} on_tab_clicked={handleTabClick} tabs={savoir_faire_tabs}>
             {#if savoir_faire_active_tab === "comp_1"}
-                <h2>Compétence 1</h2>
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                <Comp1/>
             {:else}
-                <h2>Compétence 2</h2>
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                <Comp2/>
             {/if}
         </TabsContainer>
     </div>

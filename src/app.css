@@ -36,3 +36,24 @@ body, html {
 
     cursor: none !important;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+details {
+    @apply border-b border-b-brown-coffee p-2 my-2 border-t border-t-brown-coffee not-first:border-b-0
+}
+
+details summary {
+    @apply list-none flex flex-row justify-between
+}
+
+details summary svg {
+    @apply fill-current h-10 w-10 rotate-0 group-open:rotate-180 transition-transform duration-100 ease-in-out;
+}
+
+details summary h3 {
+    @apply text-xl font-bold
+}
+

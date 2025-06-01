@@ -27,6 +27,8 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-js": "^2.0.0",
-		"gsap": "^3.13.0"
+		"apexcharts": "^4.7.0",
+		"gsap": "^3.13.0",
+		"svelte-apexcharts": "^1.0.2"
 	}
 }
