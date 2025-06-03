@@ -66,7 +66,7 @@
             <div class="fixed z-20 top-0 left-0 w-screen h-screen bg-black/50"
                  onclick={() => closeDetails()}
                  transition:fade={{ duration: 150 }}></div>
-            <div class="fixed z-30 top-1/12 left-0 w-5/6 h-11/12 bg-old-lace rounded-r-xl p-4"
+            <div class="fixed z-30 top-1/12 left-0 w-full sm:w-5/6 h-11/12 bg-old-lace sm:rounded-r-xl p-4"
                  transition:slide={{ axis: 'x', duration: 300, easing: quintOut }}>
                 {@render details()}
                 <button class="absolute top-4 right-4 h-10 w-10 bg-brown-coffee text-old-lace p-2 rounded-full"
