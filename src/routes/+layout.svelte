@@ -112,27 +112,29 @@
 <!-- Figures -->
 <div class="fixed top-0 left-0 w-screen h-screen overflow-hidden z-50" class:hidden={!showFigures}>
     <div class="w-full h-full relative">
-        <div class="bg-black/75 h-full w-full absolute top-0 left-0 cursor-pointer"
-             onclick={() => close_figure_popup()}></div>
+        <button type="button" class="bg-black/75 h-full w-full absolute top-0 left-0 cursor-pointer"
+                onclick={() => close_figure_popup()}></button>
     </div>
 
     <button type="button" aria-label="previous image"
             class="fixed top-1/2 -translate-y-1/2 left-4 md:left-10 z-50 focus:outline-none focus:ring-2 focus:ring-old-lace disabled:opacity-50 disabled:cursor-not-allowed"
             onclick={() => navigate_prev()}
+            class:cursor-disabled={!allowPrev}
             disabled={!allowPrev}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-             class="fill-old-lace h-12 w-12 drop-shadow-lg">
-            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+             class="fill-old-lace h-12 w-12 drop-shadow-lg" class:cursor-disabled={!allowPrev}>
+            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" class:cursor-disabled={!allowPrev}/>
         </svg>
     </button>
 
     <button type="button" aria-label="next image"
             class="fixed top-1/2 -translate-y-1/2 right-4 md:right-10 z-50 focus:outline-none focus:ring-2 focus:ring-old-lace disabled:opacity-50 disabled:cursor-not-allowed"
             onclick={() => navigate_next()}
+            class:cursor-disabled={!allowNext}
             disabled={!allowNext}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
-             class="fill-old-lace h-12 w-12 drop-shadow-lg">
-            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+             class="fill-old-lace h-12 w-12 drop-shadow-lg" class:cursor-disabled={!allowNext}>
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" class:cursor-disabled={!allowNext}/>
         </svg>
     </button>
 

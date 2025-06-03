@@ -18,7 +18,7 @@
            top_text="01 - 01"
            bottom_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua."/>
 
-<p on:click={() => open_figures([1, 2])}>Ouvrir les figures</p>
+<p on:click={() => open_figures([1])}>Ouvrir les figures</p>
 
 <details open={opened_details_id === 'ac_1'} class="group">
     <summary on:click|preventDefault={() => select_details('ac_1')} class="select-none cursor-none">
