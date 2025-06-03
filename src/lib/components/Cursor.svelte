@@ -56,7 +56,7 @@
 </script>
 
 <div
-        class="fixed pointer-events-none box-border bg-alabaster border-2 border-brown-coffee w-5 h-5 rounded-4xl z-50
+        class="fixed pointer-events-none box-border bg-alabaster border-2 border-brown-coffee w-5 h-5 rounded-4xl z-[999999]
            transition-transform duration-100 ease-out
            {isHoveringLink ? 'bg-mountbatten-pink link_hover_effect' : ''}
            {isClicked ? 'clicked-effect' : ''}"
