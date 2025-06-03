@@ -7,6 +7,7 @@
 	import TabsContainer, {type Tab} from "$lib/components/navigation/TabsContainer.svelte";
 	import Comp1 from "$lib/components/presentation/but2/Comp1.svelte";
 	import Comp2 from "$lib/components/presentation/but2/Comp2.svelte";
+	import {set_figures} from "$lib/figures.svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#entreprise', name: "Entreprise"},
@@ -24,6 +25,40 @@
 	function handleTabClick(tab_id: string) {
 		savoir_faire_active_tab = tab_id;
 	}
+
+	const figures = [
+		{id: 1, url: '/images/but2/add_document_for_ce.png'},
+		{id: 2, url: '/images/but2/calendar.png'},
+		{id: 3, url: '/images/but2/calendar_add_project_from_list.png'},
+		{id: 4, url: '/images/but2/calendar_dragging_card_whole.png'},
+		{id: 5, url: '/images/but2/calendar_gestion_absents.png'},
+		{id: 6, url: '/images/but2/calendar_list_projects.png'},
+		{id: 7, url: '/images/but2/calendar_modalite_reunions.png'},
+		{id: 8, url: '/images/but2/calendar_per_month_popup.png'},
+		{id: 9, url: '/images/but2/calendar_popup_ce_details.png'},
+		{id: 10, url: '/images/but2/calendar_title.png'},
+		{id: 11, url: '/images/but2/fiche_project_edit_description.png'},
+		{id: 12, url: '/images/but2/fiche_projet.png'},
+		{id: 13, url: '/images/but2/fiche_projet_acteurs.png'},
+		{id: 14, url: '/images/but2/fiche_projet_add_actor_query_list.png'},
+		{id: 15, url: '/images/but2/fiche_projet_add_actor_select.png'},
+		{id: 16, url: '/images/but2/fiche_projet_ce_infos.png'},
+		{id: 17, url: '/images/but2/fiche_projet_date_demarrage.png'},
+		{id: 18, url: '/images/but2/fiche_projet_historique_stades.png'},
+		{id: 19, url: '/images/but2/fiche_projet_reste_a_faire.png'},
+		{id: 21, url: '/images/but2/liste_projet.png'},
+		{id: 22, url: '/images/but2/liste_projet_filtres.png'},
+		{id: 23, url: '/images/but2/odj_excel.png'},
+		{id: 24, url: '/images/but2/odj_preview.png'},
+		{id: 25, url: '/images/but2/permament_members.png'},
+		{id: 26, url: '/images/but2/rdd_excel.png'},
+		{id: 27, url: '/images/but2/rdd_global.png'},
+		{id: 28, url: '/images/but2/rdd_project.png'},
+		{id: 29, url: '/images/but2/rdd_validated.png'},
+		{id: 30, url: '/images/but2/recherche_acteurs.png'}
+	];
+
+	set_figures(figures);
 </script>
 
 <svelte:head>
@@ -53,7 +88,7 @@
 </Navbar>
 
 <!-- Home -->
-<div class="w-screen h-screen relative">
+<div class="w-full h-screen relative">
     <!-- Grid -->
     <div class="absolute z-0 top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2">
         <But2Grid/>

@@ -46,7 +46,7 @@
 	});
 </script>
 
-<nav class="overflow-hidden absolute w-screen h-screen">
+<nav class="overflow-hidden absolute w-full h-screen">
     <button
             class="fixed z-[45] max-sm:top-3 max-sm:left-3 sm:hidden p-2 h-10 w-10 rounded-full bg-brown-coffee hover:bg-sepia transition-colors duration-150 text-old-lace"
             onclick={toggleNav}

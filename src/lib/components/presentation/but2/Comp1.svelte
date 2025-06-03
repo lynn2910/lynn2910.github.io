@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CompTitle from "$lib/components/presentation/but2/CompTitle.svelte";
+	import {open_figures} from "$lib/figures.svelte";
 
 	let opened_details_id: string | null = $state("ac_1");
 
@@ -10,11 +11,14 @@
 			opened_details_id = detail_id;
 		}
 	}
+
 </script>
 
 <CompTitle title="Compétence 1 - Réaliser un développement d’application"
            top_text="01 - 01"
            bottom_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua."/>
+
+<p on:click={() => open_figures([1, 2])}>Ouvrir les figures</p>
 
 <details open={opened_details_id === 'ac_1'} class="group">
     <summary on:click|preventDefault={() => select_details('ac_1')} class="select-none cursor-none">

@@ -4,6 +4,15 @@
 	import {base} from '$app/paths'
 	import Navbar from "$lib/components/navigation/Navbar.svelte";
 	import Cursor from "$lib/components/Cursor.svelte";
+	import {
+		close_figure_popup,
+		get_show_figures,
+		get_active_figure,
+		can_navigate_prev,
+		can_navigate_next,
+		navigate_prev,
+		navigate_next
+	} from '$lib/figures.svelte'
 
 	let {children} = $props();
 
@@ -18,7 +27,41 @@
 	const leftLinks = [
 		{name: 'github', href: 'https://github.com/lynn2910', target: '_blank'},
 		{name: 'email', href: 'mailto:cedric.colin35@gmail.com'}
-	]
+	];
+
+
+	// ==================================
+	//
+	//  FIGURES
+	//
+	// ==================================
+
+
+	let showFigures = $derived(get_show_figures());
+	let activeFigure = $derived(get_active_figure());
+	let allowPrev = $derived(can_navigate_prev());
+	let allowNext = $derived(can_navigate_next());
+
+	function handleKeyDown(event: KeyboardEvent) {
+		if (showFigures) {
+			if (event.key === 'ArrowLeft') {
+				navigate_prev();
+			} else if (event.key === 'ArrowRight') {
+				navigate_next();
+			} else if (event.key === 'Escape') {
+				close_figure_popup();
+			}
+		}
+	}
+
+	$effect(() => {
+		if (showFigures) {
+			window.addEventListener('keydown', handleKeyDown);
+		} else {
+			window.removeEventListener('keydown', handleKeyDown);
+		}
+		return () => window.removeEventListener('keydown', handleKeyDown);
+	});
 </script>
 
 <Cursor/>
@@ -64,4 +107,54 @@
 
 <div class={'' + marginTop}>
     {@render children()}
+</div>
+
+<!-- Figures -->
+<div class="fixed top-0 left-0 w-screen h-screen overflow-hidden z-50" class:hidden={!showFigures}>
+    <div class="w-full h-full relative">
+        <div class="bg-black/75 h-full w-full absolute top-0 left-0 cursor-pointer"
+             onclick={() => close_figure_popup()}></div>
+    </div>
+
+    <button type="button" aria-label="previous image"
+            class="fixed top-1/2 -translate-y-1/2 left-4 md:left-10 z-50 focus:outline-none focus:ring-2 focus:ring-old-lace disabled:opacity-50 disabled:cursor-not-allowed"
+            onclick={() => navigate_prev()}
+            disabled={!allowPrev}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+             class="fill-old-lace h-12 w-12 drop-shadow-lg">
+            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/>
+        </svg>
+    </button>
+
+    <button type="button" aria-label="next image"
+            class="fixed top-1/2 -translate-y-1/2 right-4 md:right-10 z-50 focus:outline-none focus:ring-2 focus:ring-old-lace disabled:opacity-50 disabled:cursor-not-allowed"
+            onclick={() => navigate_next()}
+            disabled={!allowNext}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+             class="fill-old-lace h-12 w-12 drop-shadow-lg">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/>
+        </svg>
+    </button>
+
+    <button type="button" aria-label="close popup"
+            class="fixed z-50 top-20 right-10"
+            onclick={() => close_figure_popup()}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"
+             class="fill-brown-coffee bg-old-lace hover:bg-sepia hover:fill-old-lace p-2 rounded-3xl h-12 w-12 transition-colors duration-100">
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+        </svg>
+    </button>
+
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4 max-h-[90vh] w-[70vw] flex flex-col justify-center items-center z-40">
+        {#if activeFigure}
+            <img src={activeFigure.url} alt={activeFigure.text || `Image ${activeFigure.id}`}
+                 class="object-contain shadow-2xl rounded-lg border-2 border-old-lace"/>
+
+            <p class="w-full text-old-lace italic text-center mt-2 p-2 bg-black/50 rounded-lg max-w-full text-sm sm:text-base md:text-lg">
+                Figure {activeFigure.id}: {activeFigure.text || ""}
+            </p>
+        {:else}
+            <p class="text-old-lace">Aucune figure sélectionnée.</p>
+        {/if}
+    </div>
 </div>
