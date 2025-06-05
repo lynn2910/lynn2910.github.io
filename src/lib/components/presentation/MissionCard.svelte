@@ -16,7 +16,7 @@
 	onMount(() => {
 		const search_params = new URLSearchParams(window.location.search);
 		if (search_params.has('details') && search_params.get('details') === title) {
-			show_popup = true;
+			openDetails();
 		}
 	})
 
@@ -25,7 +25,7 @@
 		search_params.set('details', title);
 		history.pushState({}, '', `${window.location.pathname}?${search_params.toString()}${window.location.hash}`);
 		show_popup = true;
-		document.body.style.overflow = "hidden";
+		document.body.style.overflow = "hidden !important";
 	}
 
 	function closeDetails() {
