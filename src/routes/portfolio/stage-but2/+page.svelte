@@ -112,7 +112,32 @@
 			url: '/images/but2/rdd_excel.png',
 			text: "Document excel d'un relevé de décisions, généré automatiquement"
 		},
-		{id: 30, url: '/images/but2/recherche_acteurs.png'}
+		{id: 30, url: '/images/but2/recherche_acteurs.png'},
+		{
+			id: 31,
+			url: '/images/but2/mysql_workbench.png',
+			text: "Logiciel 'MySQL Workbench', permettant d'interagir avec la base de donnée."
+		},
+		{
+			id: 32,
+			url: '/images/but2/gantt.png',
+			text: "Partie du diagramme de Gantt réalisé afin de suivre l'avancement du projet."
+		},
+		{
+			id: 33,
+			url: '/images/but2/exemple_code_php_querying.png',
+			text: "Exemple de code permettant d'enregistrer ou modifier un acteur qui participe aux comités d'engagement, avec les requêtes en base de données."
+		},
+		{
+			id: 34,
+			url: '/images/but2/methodologie_specs_techniques.png',
+			text: "Définition de la méthodologie qui sera appliquée pour le projet, dans le cadre des spécifications techniques du projet."
+		},
+		{
+			id: 35,
+			url: '/images/but2/mcd.png',
+			text: "Vue d'ensemble du modèle conceptuel de données."
+		}
 	];
 
 	set_figures(figures);
