@@ -1,13 +1,24 @@
 <script lang="ts">
 	import CompTitle from "$lib/components/presentation/but2/CompTitle.svelte";
+	import {onMount} from "svelte";
+
+	const comp_id = 'comp_2_opened_detail_id';
 
 	let opened_details_id: string | null = $state("ac_1");
+
+	onMount(() => {
+		if (localStorage.getItem(comp_id)) {
+			opened_details_id = localStorage.getItem(comp_id);
+		}
+	})
 
 	function select_details(detail_id: string) {
 		if (opened_details_id === detail_id) {
 			opened_details_id = null;
+			localStorage.removeItem(comp_id)
 		} else {
 			opened_details_id = detail_id;
+			localStorage.setItem(comp_id, opened_details_id)
 		}
 	}
 </script>

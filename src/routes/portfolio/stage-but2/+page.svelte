@@ -137,6 +137,16 @@
 			id: 35,
 			url: '/images/but2/mcd.png',
 			text: "Vue d'ensemble du modèle conceptuel de données."
+		},
+		{
+			id: 36,
+			url: '/images/but2/maquette_calendrier_finie.png',
+			text: "Version finale du calendrier dans la maquette."
+		},
+		{
+			id: 37,
+			url: '/images/but2/maquette_calendrier_v1.png',
+			text: "Première version dans la maquette du calendrier."
 		}
 	];
 
@@ -607,7 +617,7 @@
 </div>
 
 <!-- Savoir & savoir-faire -->
-<div class="h-screen">
+<div class="pb-50">
     <h2 id="savoir_faire" class="text-4xl text-center my-16">Savoir & savoir-faire</h2>
 
     <div class="mx-5 sm:mx-10 md:mx-20 2xl:mx-56 mb-10">
