@@ -40,11 +40,11 @@ html {
 }
 
 details {
-    @apply border-b border-b-brown-coffee p-2 my-2 border-t border-t-brown-coffee not-first:border-b-0
+    @apply border-b border-b-brown-coffee p-2 my-2 border-t border-t-brown-coffee not-first:border-b-0;
 }
 
 details summary {
-    @apply list-none flex flex-row justify-between
+    @apply list-none flex flex-row justify-between;
 }
 
 details summary svg {
@@ -52,6 +52,5 @@ details summary svg {
 }
 
 details summary h3 {
-    @apply text-xl font-bold
+    @apply text-xl font-bold;
 }
-

@@ -155,6 +155,16 @@
 			id: 37,
 			url: '/images/but2/maquette_calendrier_v1.png',
 			text: "Première version dans la maquette du calendrier."
+		},
+		{
+			id: 38,
+			url: '/images/but2/batch_queries.png',
+			text: "Schéma de démonstration de la technique d'optimisation des requêtes par lot."
+		},
+		{
+			id: 39,
+			url: '/images/but2/ldap_cache.png',
+			text: "Schéma de démonstration de la technique de mise en cache des acteurs."
 		}
 	];
 

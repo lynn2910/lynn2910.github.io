@@ -3,10 +3,12 @@
 
 	const {
 		figure_id,
-		show_hover_effect = true
+		show_hover_effect = true,
+		show_text = true
 	}: {
 		figure_id: number,
-		show_hover_effect?: boolean
+		show_hover_effect?: boolean,
+		show_text?: boolean
 	} = $props();
 
 	const figure: Figure | undefined = $derived(get_figures().find(f => f.id === figure_id));
@@ -23,7 +25,9 @@
                 </div>
             {/if}
         </button>
-        <p>Figure {figure_id}: {figure.text}</p>
+        {#if show_text}
+            <p>Figure {figure_id}: {figure.text}</p>
+        {/if}
     {:else}
         <div class="w-full h-20 bg-brown-coffee">
             <p class="text-old-lace font-bold">Impossible de charger la figure.</p>

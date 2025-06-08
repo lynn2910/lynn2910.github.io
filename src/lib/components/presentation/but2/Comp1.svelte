@@ -223,7 +223,7 @@
 <hr class="my-7">
 
 <p id="synthese_comp_1">
-    En synthèse, j'ai développé une <b>solide expertise dans l'élaboration et l'implémentation de spécifications
+    En synthèse, j'ai acquis une <b>solide expérience dans l'élaboration et l'implémentation de spécifications
     fonctionnelles et techniques</b>, de la conception de <b>Modèles Logiques de Données (MLD)</b> évolutifs à la
     création de<b>maquettes UI/UX interactives sur Figma</b>, en intégrant les retours utilisateurs pour affiner
     l'ergonomie et les workflows. J'ai acquis une <b>maîtrise des principes d'ergonomie et d'accessibilité</b>, en
