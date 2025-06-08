@@ -1,6 +1,8 @@
 <script lang="ts">
 	import CompTitle from "$lib/components/presentation/but2/CompTitle.svelte";
 	import {onMount} from "svelte";
+	import FiguresCarousel from "$lib/components/navigation/FiguresCarousel.svelte";
+	import FigureLink from "$lib/components/navigation/FigureLink.svelte";
 
 	const comp_id = 'comp_2_opened_detail_id';
 
@@ -36,8 +38,16 @@
         </svg>
     </summary>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna
-    aliqua.
+
+    <div class="h-96">
+        <FiguresCarousel figure_ids={[35, 33, 29, 24, 22, 11]}/>
+    </div>
+
+    <hr class="mb-3">
+
+    <div>
+
+    </div>
 </details>
 
 <details open={opened_details_id === 'ac_2'} class="group">

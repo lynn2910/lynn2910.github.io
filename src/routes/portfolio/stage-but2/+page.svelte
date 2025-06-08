@@ -9,6 +9,7 @@
 	import Comp2 from "$lib/components/presentation/but2/Comp2.svelte";
 	import {set_figures} from "$lib/figures.svelte";
 	import SingleFigure from "$lib/components/navigation/SingleFigure.svelte";
+	import {onMount} from "svelte";
 
 	const links: { href: string, name: string }[] = [
 		{href: '#entreprise', name: "Entreprise"},
@@ -23,8 +24,15 @@
 
 	let savoir_faire_active_tab: string = $state(savoir_faire_tabs[0]?.id);
 
+	onMount(() => {
+		if (localStorage.getItem("active_but2_savoir_tab")) {
+			savoir_faire_active_tab = localStorage.getItem("active_but2_savoir_tab")!;
+		}
+	})
+
 	function handleTabClick(tab_id: string) {
 		savoir_faire_active_tab = tab_id;
+		localStorage.setItem("active_but2_savoir_tab", tab_id)
 	}
 
 	const figures = [

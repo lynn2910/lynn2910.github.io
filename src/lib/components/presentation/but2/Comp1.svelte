@@ -27,7 +27,7 @@
 
 <CompTitle title="Compétence 1 - Réaliser un développement d’application"
            top_text="01 - 01"
-           bottom_text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore magna aliqua."/>
+           bottom_text="Développer, coder, tester et intégrer une solution informatique client de qualité."/>
 
 <a class="btn w-fit" href="#synthese_comp_1">
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
